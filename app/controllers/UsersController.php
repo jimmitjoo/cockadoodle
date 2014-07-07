@@ -34,7 +34,7 @@ class UsersController extends \BaseController {
 	{
 
         if (
-            User::where('email', '=', Input::get('email')->count() > 0) &&
+            (User::where('email', '=', Input::get('email'))->count() > 0) &&
             !Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])
         ) {
 
