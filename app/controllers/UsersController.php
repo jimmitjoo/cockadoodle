@@ -111,8 +111,6 @@ class UsersController extends \BaseController {
         // get fb service
         $fb = OAuth::consumer( 'Facebook' );
 
-        // check if code is valid
-
         // if code is provided get user data and sign in
         if ( !empty( $code ) ) {
 
@@ -121,6 +119,8 @@ class UsersController extends \BaseController {
 
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
+
+            return $result;
 
             if (
                 User::where('facebook_identification', '=', $result['id'])->count() == 0 &&
