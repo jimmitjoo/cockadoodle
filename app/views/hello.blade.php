@@ -23,11 +23,11 @@
 
 <div class="email_box">
 
-    <form action="/user" method="post">
-        <input placeholder="email" type="text"/>
-        <input placeholder="password" type="password"/>
-        <input value="sign up / login" type="submit"/>
-    </form>
+    {{ Form::open(['url' => '/user', 'method' => 'post') }}
+        {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
+        {{ Form::password('password', '', ['placeholder' => 'Password']) }}
+        {{ Form::submit('Sign up / Login') }}
+    {{ Form::close() }}
 
 </div>
 
