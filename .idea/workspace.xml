@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="master.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/master/master.blade.php">
+      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="0.3303671" vertical-offset="0" max-vertical-offset="899">
+            <state line="34" column="41" selection-start="899" selection-end="899" vertical-scroll-proportion="0.7508343" vertical-offset="0" max-vertical-offset="999">
               <folding />
             </state>
           </provider>
@@ -56,10 +56,10 @@
         <option value="$PROJECT_DIR$/app/config/oauth-4-laravel.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_135433_add_remember_token_to_users_table.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
         <option value="$PROJECT_DIR$/public/css/cockadoodlestyle.css" />
         <option value="$PROJECT_DIR$/app/views/master/master.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -640,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="115" selection-start="943" selection-end="943" vertical-scroll-proportion="0.6607342" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.15016685" vertical-offset="0" max-vertical-offset="899">
@@ -671,6 +664,13 @@
     <entry file="file://$PROJECT_DIR$/app/views/master/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="0.3303671" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="41" selection-start="899" selection-end="899" vertical-scroll-proportion="0.7508343" vertical-offset="0" max-vertical-offset="999">
           <folding />
         </state>
       </provider>

@@ -29,5 +29,13 @@ Route::get('/logout', function(){
 
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friendslist', ['as' => 'friends', function(){
-    return 'Vänlista placeras här. <br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>';
+
+    $friends = User::all();
+
+    echo '<h1>Your awesome friends</h1>';
+    foreach ($friends as $f) :
+        echo $f['email'].'<br />';
+    endforeach;
+
+    return '<br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>';
 }]);
