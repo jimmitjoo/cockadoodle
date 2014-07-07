@@ -111,7 +111,7 @@ class UsersController extends \BaseController {
             //display whole array().
             //dd($result);
 
-            if (! User::where('facebook_identification', '=', $result['id']) ) {
+            if (User::where('facebook_identification', '=', $result['id'])->count() == 0) {
 
                 /*$user = new User();
                 $user->email = $result['email'];
@@ -123,6 +123,7 @@ class UsersController extends \BaseController {
                 return 'Hej';
 
             } else {
+                $u = User::where('facebook_identification', '=', $result['id'])->get();
                 return $u;
             }
 
