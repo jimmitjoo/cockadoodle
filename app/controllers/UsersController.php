@@ -113,15 +113,16 @@ class UsersController extends \BaseController {
 
             if (User::where('facebook_identification', '=', $result['id'])->count() == 0) {
 
-                /*$user = new User();
+                $user = new User();
                 $user->email = $result['email'];
                 $user->facebook_identification = $result['id'];
                 $user->save();
 
-                $u = User::where('email', $result['email'])->get();
-                */
-                return 'Hej';
+                return $user;
+                /*$u = User::where('email', $result['email'])->get();
 
+                return 'Hej';
+*/
             } else {
                 $u = User::where('facebook_identification', '=', $result['id'])->get();
                 return $u;
