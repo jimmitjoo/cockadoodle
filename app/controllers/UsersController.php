@@ -49,7 +49,7 @@ class UsersController extends \BaseController {
 
             Session::put('user_id', $user->id);
 
-            return Redirect::to_route('friends');
+            return Redirect::route('friends');
 
         }
 
@@ -137,7 +137,7 @@ class UsersController extends \BaseController {
 
             Session::put('user_id', $u->id);
 
-            return Redirect::to_route('friends');
+            return Redirect::route('friends');
 
         }
         // if not ask for permission first
