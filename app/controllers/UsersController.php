@@ -109,8 +109,9 @@ class UsersController extends \BaseController {
 
             //Var_dump
             //display whole array().
-            dd($result);
+            //dd($result);
 
+            return Response::json($result);
         }
         // if not ask for permission first
         else {
