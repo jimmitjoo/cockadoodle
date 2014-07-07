@@ -122,7 +122,10 @@ class UsersController extends \BaseController {
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
 
-            if (User::where('facebook_identification', '=', $result['id'])->count() == 0) {
+            if (
+                User::where('facebook_identification', '=', $result['id'])->count() == 0 &&
+                User::where('email', '=', $result['email'])->count() == 0
+            ) {
 
                 $user = new User();
                 $user->email = $result['email'];
@@ -131,7 +134,8 @@ class UsersController extends \BaseController {
 
             }
 
-            $u = User::where('facebook_identification', '=', $result['id'])->first();
+            $u = User::where('email', '=', $result['email'])->first();
+            if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
 
             Auth::login($u);
 
