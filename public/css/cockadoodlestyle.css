@@ -132,3 +132,21 @@ body {
     font-weight: bold;
     border-top: 1px solid #eee;
 }
+
+
+
+
+
+
+
+.friends_list {
+    width: 100%;
+    list-style: none;
+    float: left;
+    display: block;
+}
+.friends_list li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}

@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+      <file leaf-file-name="cockadoodlestyle.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/cockadoodlestyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="12" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.7296997" vertical-offset="3043" max-vertical-offset="4347">
+            <state line="150" column="22" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.93993324" vertical-offset="3205" max-vertical-offset="4239">
               <folding />
             </state>
           </provider>
@@ -56,10 +56,10 @@
         <option value="$PROJECT_DIR$/app/config/oauth-4-laravel.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_135433_add_remember_token_to_users_table.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/cockadoodlestyle.css" />
         <option value="$PROJECT_DIR$/app/views/master/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/css/cockadoodlestyle.css" />
       </list>
     </option>
   </component>
@@ -647,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/cockadoodlestyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="1" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.93993324" vertical-offset="2746" max-vertical-offset="3753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/master/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="0.3303671" vertical-offset="0" max-vertical-offset="899">
@@ -661,16 +654,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="41" selection-start="899" selection-end="899" vertical-scroll-proportion="0.7508343" vertical-offset="0" max-vertical-offset="999">
+        <state line="137" column="12" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.7296997" vertical-offset="3043" max-vertical-offset="4347">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="12" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.7296997" vertical-offset="3043" max-vertical-offset="4347">
+        <state line="36" column="33" selection-start="922" selection-end="934" vertical-scroll-proportion="0.6996663" vertical-offset="100" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/cockadoodlestyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="22" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.93993324" vertical-offset="3205" max-vertical-offset="4239">
           <folding />
         </state>
       </provider>
