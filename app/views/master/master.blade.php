@@ -52,7 +52,7 @@
         .logo {
             width: 100%;
             height: 100%;
-            background: url('/img/cadlogo.png') center center no-repeat;
+            /*background: url('/img/cadlogo.png') center center no-repeat;*/
             display: block;
             float: left;
         }

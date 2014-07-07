@@ -29,5 +29,5 @@ Route::get('/logout', function(){
 
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friendslist', ['as' => 'friends', function(){
-    return 'Vänlista placeras här.';
+    return 'Vänlista placeras här. <br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>';
 }]);
