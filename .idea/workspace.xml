@@ -25,7 +25,7 @@
       <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="14" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.39933258" vertical-offset="2638" max-vertical-offset="3564">
+            <state line="127" column="12" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.8197998" vertical-offset="2692" max-vertical-offset="3942">
               <folding />
             </state>
           </provider>
@@ -53,10 +53,10 @@
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_091547_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/.env.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
         <option value="$PROJECT_DIR$/app/config/oauth-4-laravel.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
       </list>
     </option>
@@ -557,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="575" selection-end="575" vertical-scroll-proportion="0.36040044" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="12" selection-start="54" selection-end="61" vertical-scroll-proportion="0.15016685" vertical-offset="0" max-vertical-offset="899">
@@ -620,9 +613,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="648" selection-end="648" vertical-scroll-proportion="0.4204672" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="14" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.39933258" vertical-offset="2638" max-vertical-offset="3564">
+        <state line="127" column="12" selection-start="2356" selection-end="2356" vertical-scroll-proportion="0.8197998" vertical-offset="2692" max-vertical-offset="3942">
           <folding />
         </state>
       </provider>

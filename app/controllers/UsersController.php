@@ -111,7 +111,21 @@ class UsersController extends \BaseController {
             //display whole array().
             //dd($result);
 
-            return Response::json($result);
+            if (! $u = User::where('facebook_identification', '=', $result->id)->get() ) {
+
+                $user = new User();
+                $user->email = $result->email;
+                $user->facebook_identification = $result->id;
+                $user->save();
+
+                $u = User::where('email', $result->email)->get();
+
+            }
+
+            Session::put('user_id', $u->id);
+
+            return Redirect::to('/friendslist');
+            
         }
         // if not ask for permission first
         else {
