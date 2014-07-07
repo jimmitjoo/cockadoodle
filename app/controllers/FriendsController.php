@@ -12,15 +12,7 @@ class FriendsController extends \BaseController {
 	{
         $friends = User::all();
 
-        echo '<h1>Your awesome friends</h1>';
-
-        echo '<ul class="friends_list">';
-        foreach ($friends as $f) :
-            echo '<li>' . $f['email'] . '</li>';
-        endforeach;
-        echo '</ul>';
-
-        return '<br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>';
+        return View::make('friendslist')->with($friends);
 	}
 
 	/**
