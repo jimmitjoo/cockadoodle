@@ -23,7 +23,7 @@
 
 <div class="email_box">
 
-    {{ Form::open(['url' => '/user', 'method' => 'post') }}
+    {{ Form::open(['url' => '/user', 'method' => 'post']) }}
         {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
         {{ Form::password('password', '', ['placeholder' => 'Password']) }}
         {{ Form::submit('Sign up / Login') }}
