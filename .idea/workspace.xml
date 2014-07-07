@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hello.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
+      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="68" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6696329" vertical-offset="235" max-vertical-offset="1512">
+            <state line="137" column="118" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.6696329" vertical-offset="3097" max-vertical-offset="4347">
               <folding />
             </state>
           </provider>
@@ -61,8 +61,8 @@
         <option value="$PROJECT_DIR$/app/controllers/FriendsController.php" />
         <option value="$PROJECT_DIR$/app/views/friendslist.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_145443_add_username_to_users_table.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
       </list>
     </option>
   </component>
@@ -707,16 +707,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="53" selection-start="946" selection-end="946" vertical-scroll-proportion="0.63959956" vertical-offset="694" max-vertical-offset="4401">
+        <state line="31" column="68" selection-start="784" selection-end="784" vertical-scroll-proportion="0.4894327" vertical-offset="397" max-vertical-offset="1512">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="68" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6696329" vertical-offset="235" max-vertical-offset="1512">
+        <state line="137" column="118" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.6696329" vertical-offset="3097" max-vertical-offset="4347">
           <folding />
         </state>
       </provider>
