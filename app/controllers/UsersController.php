@@ -128,10 +128,9 @@ class UsersController extends \BaseController {
                 $u = User::where('facebook_identification', '=', $result['id'])->first();
             }
 
-            return $u;
-            //Session::put('user_id', $u->id);
+            Session::put('user_id', $u->id);
 
-            //return Redirect::to('/friendslist');*/
+            return Redirect::to('/friendslist');
 
         }
         // if not ask for permission first

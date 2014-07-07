@@ -20,9 +20,6 @@ Route::get('/login', function(){
 });
 
 Route::get('/fbver', 'UsersController@facebook');
-/*
- *
 Route::get('/friendslist', function(){
     return 'Vänlista placeras här.';
 });
- */
