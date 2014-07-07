@@ -7,7 +7,12 @@
 
 @section('content')
 <div class="startscreen">
-    <div class="logo"></div>
+    <div class="logo">
+        <video width="320" height="240" autoplay="autoplay">
+            <source src="Cad_Logo_anim_mk1.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </div>
 
 
