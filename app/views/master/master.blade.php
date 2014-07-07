@@ -43,7 +43,7 @@
             height: 100%;
             display: block;
             float: left;
-            background: rgba(255,111,4,1);
+            background: #ffc109;
             position: absolute;
             top: 0;
             left: 0;
@@ -111,7 +111,7 @@
             padding: 0;
             text-transform: uppercase;
             text-align: center;
-            background: #ffc109;
+            background: rgba(255,111,4,.5);
             border-radius: 3px;
             border: 1px solid rgba(238,238,238,.5);
             font-weight: 400;
