@@ -47,7 +47,7 @@ class UsersController extends \BaseController {
             $user->password = Hash::make(Input::get('password'));
             $user->save();
 
-            Session::set('user_id', $user->id);
+            Session::put('user_id', $user->id);
 
             return Redirect::to_route('friends');
 
