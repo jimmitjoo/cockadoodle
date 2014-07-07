@@ -22,6 +22,6 @@ Route::get('/login', function(){
 Route::resource('/user', 'UsersController');
 
 Route::get('/fbver', 'UsersController@facebook');
-Route::get('/friendslist', function(){
+Route::get('/friendslist', ['as' => 'friends', function(){
     return 'Vänlista placeras här.';
-});
+}]);

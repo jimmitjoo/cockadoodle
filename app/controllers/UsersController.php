@@ -33,7 +33,22 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 
-        dd( Input::all() );
+        if (User::where('email', '=', Input::get('email')->count() > 0) && !Auth::attempt(['email' => Input::get('email'), 'password' = Input::get('password')])) {
+
+            return 'User has an account, bit the password is not correct';
+
+        } else {
+
+            $user = new User();
+            $user->email = Input::get('email');
+            $user->password = Hash::make(Input::get('password'));
+            $user->save();
+
+            Session::set('user_id', $user->id);
+
+            return Redirect::to_route('friends');
+
+        }
 
 	}
 
@@ -119,7 +134,7 @@ class UsersController extends \BaseController {
 
             Session::put('user_id', $u->id);
 
-            return Redirect::to('/friendslist');
+            return Redirect::to_route('friends');
 
         }
         // if not ask for permission first
