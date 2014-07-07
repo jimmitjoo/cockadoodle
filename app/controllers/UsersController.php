@@ -47,7 +47,7 @@ class UsersController extends \BaseController {
             $user->password = Hash::make(Input::get('password'));
             $user->save();
 
-            Session::put('user_id', $user->id);
+            Auth::login($user);
 
             return Redirect::route('friends');
 
@@ -93,14 +93,14 @@ class UsersController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /users/{id}
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy()
 	{
-		//
+		Auth::logout();
+
+        return Redirect::to('/');
 	}
 
 
@@ -135,7 +135,7 @@ class UsersController extends \BaseController {
 
             $u = User::where('facebook_identification', '=', $result['id'])->first();
 
-            Session::put('user_id', $u->id);
+            Auth::login($u);
 
             return Redirect::route('friends');
 

@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-    if (Session::get('user_id')) return Redirect::route('friends');
+    if (Auth::check()) return Redirect::route('friends');
 
 	return View::make('hello');
 });
@@ -22,6 +22,7 @@ Route::get('/login', function(){
 });
 
 Route::resource('/user', 'UsersController');
+Route::get('/logout', 'UsersController@destroy');
 
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friendslist', ['as' => 'friends', function(){
