@@ -49,13 +49,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
             'host'      => getenv('DB_HOST'),
-			'host'      => 'localhost',
             'database'  => getenv('DB_NAME'),
-			'database'  => 'cockadoodle',
             'username'  => getenv('DB_USER'),
-			'username'  => 'homestead',
             'password'  => getenv('DB_PASS'),
-			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
