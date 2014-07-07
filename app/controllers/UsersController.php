@@ -122,6 +122,8 @@ class UsersController extends \BaseController {
                 */
                 return 'Hej';
 
+            } else {
+                return $u;
             }
 
             //Session::put('user_id', $u->id);
