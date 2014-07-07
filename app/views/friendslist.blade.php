@@ -10,7 +10,9 @@
     <h1>Your awesome friends</h1>
 
     <ul class="friends_list">
-        {{ $friends }}
+    @foreach ($friends as $f) :
+    <li> {{ $f['email'] }} </li>
+    @endforeach
     </ul>
 
     <br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>
