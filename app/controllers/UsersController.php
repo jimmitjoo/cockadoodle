@@ -118,9 +118,9 @@ class UsersController extends \BaseController {
                 $user->facebook_identification = $result['id'];
                 $user->save();
 
-                $u = $user->id;
+                //$u = $user->id;
 
-                /*$u = User::where('email', $result['email'])->get();
+                $u = User::where('email', $result['email'])->first();
 
                 return 'Hej';
                 */
