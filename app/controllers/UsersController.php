@@ -33,7 +33,10 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 
-        if (User::where('email', '=', Input::get('email')->count() > 0) && !Auth::attempt(['email' => Input::get('email'), 'password' = Input::get('password')])) {
+        if (
+            User::where('email', '=', Input::get('email')->count() > 0) &&
+            !Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])
+        ) {
 
             return 'User has an account, bit the password is not correct';
 
