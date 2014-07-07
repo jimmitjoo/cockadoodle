@@ -117,9 +117,6 @@ class UsersController extends \BaseController {
             // get fb authorization
             $url = $fb->getAuthorizationUri();
 
-            echo 'Redirect';
-
-            dd($url);
             // return to facebook login url
             return Redirect::to( (string)$url );
         }
