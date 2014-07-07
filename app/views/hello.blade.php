@@ -23,7 +23,7 @@
 
 <div class="email_box">
 
-    <form action="">
+    <form action="/user" method="post">
         <input placeholder="email" type="text"/>
         <input placeholder="password" type="password"/>
         <input value="sign up / login" type="button"/>

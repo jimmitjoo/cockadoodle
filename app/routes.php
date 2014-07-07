@@ -19,6 +19,8 @@ Route::get('/login', function(){
     return View::make('login');
 });
 
+Route::resource('/user', 'UsersController');
+
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friendslist', function(){
     return 'Vänlista placeras här.';
