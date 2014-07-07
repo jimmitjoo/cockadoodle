@@ -31,7 +31,7 @@
     {{ Form::open(['url' => '/user', 'method' => 'post']) }}
     {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
     {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
-    {{ Form::password('password', ['placeholder' => 'Password']) }}
+    {{ Form::password('password', ['placeholder' => 'Choose password']) }}
     {{ Form::submit('Sign up') }}
     {{ Form::close() }}
 
