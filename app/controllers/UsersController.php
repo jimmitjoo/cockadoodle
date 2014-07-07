@@ -98,9 +98,7 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy()
 	{
-		Auth::logout();
 
-        return Redirect::to('/');
 	}
 
 
