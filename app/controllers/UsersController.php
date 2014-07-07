@@ -118,16 +118,17 @@ class UsersController extends \BaseController {
                 $user->facebook_identification = $result['id'];
                 $user->save();
 
-                return $user;
+                $u = $user->id;
+
                 /*$u = User::where('email', $result['email'])->get();
 
                 return 'Hej';
-*/
+                */
             } else {
                 $u = User::where('facebook_identification', '=', $result['id'])->get();
-                return $u;
             }
 
+            return $u;
             //Session::put('user_id', $u->id);
 
             //return Redirect::to('/friendslist');*/
