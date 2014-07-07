@@ -33,7 +33,7 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 
-        return Input::all();
+        dd( Input::all() );
 
 	}
 
