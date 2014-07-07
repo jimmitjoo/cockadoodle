@@ -119,7 +119,7 @@
         .email_box input[placeholder] {
             color: #fff;
         }
-        .email_box input[type=button] {
+        .email_box input[type=submit] {
             width: 40%;
             margin-left: 30%;
             margin-top: 30px;
