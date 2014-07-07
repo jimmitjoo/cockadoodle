@@ -10,7 +10,7 @@
     <h1>Your awesome friends</h1>
 
     <ul class="friends_list">
-    @foreach ($friends as $f) :
+    @foreach ($friends as $f)
     <li> {{ $f['email'] }} </li>
     @endforeach
     </ul>
