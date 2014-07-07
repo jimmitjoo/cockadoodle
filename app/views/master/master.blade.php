@@ -43,7 +43,7 @@
             height: 100%;
             display: block;
             float: left;
-            color: rgba(255,111,4,1);
+            background: rgba(255,111,4,1);
             position: absolute;
             top: 0;
             left: 0;
