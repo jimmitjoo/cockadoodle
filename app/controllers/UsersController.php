@@ -104,13 +104,6 @@ class UsersController extends \BaseController {
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
 
-            $message = 'Your unique facebook user id is: ' . $result['id'] . ' and your name is ' . $result['name'];
-            echo $message. "<br/>";
-
-            //Var_dump
-            //display whole array().
-            //dd($result);
-
             if (User::where('facebook_identification', '=', $result['id'])->count() == 0) {
 
                 $user = new User();
@@ -118,15 +111,9 @@ class UsersController extends \BaseController {
                 $user->facebook_identification = $result['id'];
                 $user->save();
 
-                //$u = $user->id;
-
-                $u = User::where('email', $result['email'])->first();
-
-                return 'Hej';
-                */
-            } else {
-                $u = User::where('facebook_identification', '=', $result['id'])->first();
             }
+
+            $u = User::where('facebook_identification', '=', $result['id'])->first();
 
             Session::put('user_id', $u->id);
 
