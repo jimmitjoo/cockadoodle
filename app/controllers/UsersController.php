@@ -125,7 +125,7 @@ class UsersController extends \BaseController {
                 return 'Hej';
                 */
             } else {
-                $u = User::where('facebook_identification', '=', $result['id'])->get();
+                $u = User::where('facebook_identification', '=', $result['id'])->first();
             }
 
             return $u;
