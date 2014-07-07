@@ -12,7 +12,7 @@ class FriendsController extends \BaseController {
 	{
         $friends = User::all();
 
-        return View::make('friendslist')->with($friends);
+        return View::make('friendslist')->withFriends($friends);
 	}
 
 	/**
