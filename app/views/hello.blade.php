@@ -11,11 +11,11 @@
 </div>
 
 
-<div class="facebook_box">
+<a href="/fbver" class="facebook_box">
     <div class="facebook_logo">
         <i class="fa fa-facebook-square"></i>
     </div>
-</div>
+</a>
 
 <div class="login_box">
     Login
