@@ -111,7 +111,7 @@ class UsersController extends \BaseController {
             //display whole array().
             //dd($result);
 
-            if (! $u = User::where('facebook_identification', '=', $result['id'])->get() ) {
+            //if (! $u = User::where('facebook_identification', '=', $result['id'])->get() ) {
 
                 /*$user = new User();
                 $user->email = $result['email'];
@@ -122,11 +122,11 @@ class UsersController extends \BaseController {
                 */
                 return 'Hej';
 
-            }
+            /*}
 
             Session::put('user_id', $u->id);
 
-            return Redirect::to('/friendslist');
+            return Redirect::to('/friendslist');*/
 
         }
         // if not ask for permission first
