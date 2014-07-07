@@ -111,7 +111,7 @@
             padding: 0;
             text-transform: uppercase;
             text-align: center;
-            background: rgba(255,111,4,.5);
+            background: #ffc109;
             border-radius: 3px;
             border: 1px solid rgba(238,238,238,.5);
             font-weight: 400;
