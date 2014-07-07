@@ -135,7 +135,7 @@ class UsersController extends \BaseController {
             $u = User::where('email', '=', $result['email'])->first();
             if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
 
-            if ($u->username && empty($u->username)) $u->username = $result['first_name']. ' ' . $result['last_name'];
+            if (!$u->username || empty($u->username)) $u->username = $result['first_name']. ' ' . $result['last_name'];
 
             Auth::login($u);
 
