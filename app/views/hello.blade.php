@@ -29,9 +29,10 @@
 <div class="email_box">
 
     {{ Form::open(['url' => '/user', 'method' => 'post']) }}
-        {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
-        {{ Form::password('password', '', ['placeholder' => 'Password']) }}
-        {{ Form::submit('Sign up / Login') }}
+    {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
+    {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
+    {{ Form::password('password', '', ['placeholder' => 'Password']) }}
+    {{ Form::submit('Sign up') }}
     {{ Form::close() }}
 
 </div>

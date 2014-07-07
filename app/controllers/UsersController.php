@@ -45,6 +45,7 @@ class UsersController extends \BaseController {
             $user = new User();
             $user->email = Input::get('email');
             $user->password = Hash::make(Input::get('password'));
+            $user->username = Input::get('username');
             $user->save();
 
             Auth::login($user);
@@ -130,6 +131,7 @@ class UsersController extends \BaseController {
                 $user = new User();
                 $user->email = $result['email'];
                 $user->facebook_identification = $result['id'];
+                $user->username = $result['first_name']. ' ' . $result['last_name'];
                 $user->save();
 
             }

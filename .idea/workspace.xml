@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+      <file leaf-file-name="hello.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="27" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.5194661" vertical-offset="2827" max-vertical-offset="4347">
+            <state line="31" column="68" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6696329" vertical-offset="235" max-vertical-offset="1512">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,6 @@
         <option value="$PROJECT_DIR$/app/config/database.php" />
         <option value="$PROJECT_DIR$/app/config/oauth-4-laravel.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_135433_add_remember_token_to_users_table.php" />
-        <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
         <option value="$PROJECT_DIR$/app/views/master/master.blade.php" />
         <option value="$PROJECT_DIR$/public/css/cockadoodlestyle.css" />
         <option value="$PROJECT_DIR$/app/routes.php" />
@@ -63,6 +62,7 @@
         <option value="$PROJECT_DIR$/app/views/friendslist.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_07_07_145443_add_username_to_users_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
       </list>
     </option>
   </component>
@@ -679,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="954" selection-end="1242" vertical-scroll-proportion="0.54949945" vertical-offset="586" max-vertical-offset="1485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="83" selection-start="852" selection-end="852" vertical-scroll-proportion="0.63070077" vertical-offset="0" max-vertical-offset="899">
@@ -716,7 +709,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="27" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.5194661" vertical-offset="2827" max-vertical-offset="4347">
+        <state line="47" column="53" selection-start="946" selection-end="946" vertical-scroll-proportion="0.63959956" vertical-offset="694" max-vertical-offset="4401">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="68" selection-start="784" selection-end="784" vertical-scroll-proportion="0.6696329" vertical-offset="235" max-vertical-offset="1512">
           <folding />
         </state>
       </provider>
