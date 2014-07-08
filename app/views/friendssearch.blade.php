@@ -1,4 +1,4 @@
-<ul>
+<ul class="result">
     @if (count($matches) > 0)
 
         @foreach($matches as $m)
