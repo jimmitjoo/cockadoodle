@@ -35,6 +35,8 @@
     {{ Form::submit('Sign up') }}
     {{ Form::close() }}
 
+    <a href="#" class="login_to_account">Login</a>
+
 </div>
 <div class="email_box sign_in" style="display: none">
 
@@ -44,6 +46,8 @@
     {{ Form::submit('Login') }}
     {{ Form::close() }}
 
+    <a href="#" class="create_account">Create new account</a>
+
 </div>
 
 @stop
@@ -52,15 +56,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(function() {
-        $('.login_box').on('click touchstart', function(){
-            $this = $(this);
+        $('.login_to_account, .create_account').on('click touchstart', function(){
             $('.sign_in').toggle();
             $('.sign_up').toggle();
-            if ($('.sign_up').is(':visible')) {
-                $this.text('Login');
-            } else {
-                $this.text('Sign up');
-            }
         });
 
         setTimeout(function(){

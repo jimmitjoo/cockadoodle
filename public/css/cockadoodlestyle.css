@@ -83,6 +83,9 @@ body {
     background: #ffc109;
     border-top: 1px solid #eee;
 }
+.email_box.sign_up {
+    background: rgba(163,233,164,1);
+}
 .email_box form {
     width: 100%;
     display: block;
@@ -105,6 +108,9 @@ body {
     border: 1px solid rgba(238,238,238,.5);
     font-weight: 400;
     letter-spacing: 1px;
+}
+.email_box.sign_up input {
+    background: rgba(66,189,65,.5);
 }
 .email_box input[placeholder] {
     color: #fff;
