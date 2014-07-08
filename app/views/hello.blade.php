@@ -56,7 +56,7 @@
             $this = $(this);
             $('.sign_in').toggle();
             $('.sign_up').toggle();
-            if ($('.sign_in').is(':visible')) {
+            if ($('.sign_up').is(':visible')) {
                 $this.text('Login');
             } else {
                 $this.text('Sign up');
