@@ -53,12 +53,15 @@
 <script>
     $(function() {
         $('.login_box').on('click touchstart', function(){
+            $this = $(this);
             if ($('.sign_in').is(':visible')) {
                 $('.sign_in').hide();
                 $('.sign_up').show();
+                $this.text('Sign up');
             } else {
                 $('.sign_in').show();
                 $('.sign_up').hide();
+                $this.text('Login');
             }
         });
 
