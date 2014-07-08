@@ -19,8 +19,7 @@ class FriendsController extends \BaseController {
     {
         $query = Input::get('query');
 
-        $users = User::
-                 where('username', 'LIKE', '%' . $query . '%')
+        $users = User::where('username', 'LIKE', '%' . $query . '%')
                  ->orWhere('email', 'LIKE', '%' . $query . '%')
                  ->get();
 
