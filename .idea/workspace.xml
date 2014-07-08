@@ -25,7 +25,7 @@
       <file leaf-file-name="friendslist.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/friendslist.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="39" selection-start="750" selection-end="750" vertical-scroll-proportion="0.54949945" vertical-offset="316" max-vertical-offset="1296">
+            <state line="34" column="32" selection-start="884" selection-end="884" vertical-scroll-proportion="0.6696329" vertical-offset="316" max-vertical-offset="1296">
               <folding />
             </state>
           </provider>
@@ -775,9 +775,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/firendssearch.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="53" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06006674" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="54" selection-start="493" selection-end="493" vertical-scroll-proportion="0.48053393" vertical-offset="0" max-vertical-offset="899">
+        <state line="16" column="11" selection-start="446" selection-end="450" vertical-scroll-proportion="0.48053393" vertical-offset="0" max-vertical-offset="899">
           <folding />
         </state>
       </provider>
@@ -789,16 +796,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/firendssearch.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="53" selection-start="84" selection-end="84" vertical-scroll-proportion="0.06006674" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/friendslist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="39" selection-start="750" selection-end="750" vertical-scroll-proportion="0.54949945" vertical-offset="316" max-vertical-offset="1296">
+        <state line="34" column="32" selection-start="884" selection-end="884" vertical-scroll-proportion="0.6696329" vertical-offset="316" max-vertical-offset="1296">
           <folding />
         </state>
       </provider>
