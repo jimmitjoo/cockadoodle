@@ -29,7 +29,19 @@
 <script>
     $(function() {
         $('.username_search').on('keyup', function(){
-            $.ajax({
+            var jqxhr = $.post( "/api/search", function() {
+                alert( "success" );
+            })
+                .done(function() {
+                    alert( "second success" );
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+                .always(function() {
+                    alert( "finished" );
+                });
+            /*$.ajax({
                 type: 'POST',
                 url: '/api/search',
                 data: { username: $('.username_search').val() },
@@ -40,7 +52,7 @@
                 error: function(data) {
                     alert('error');
                 }
-            })
+            })*/
         });
     });
 </script>
