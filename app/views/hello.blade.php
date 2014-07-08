@@ -26,13 +26,22 @@
     Login
 </div>
 
-<div class="email_box">
+<div class="email_box sign_up">
 
     {{ Form::open(['url' => '/user', 'method' => 'post']) }}
     {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
     {{ Form::email('email', '', ['placeholder' => 'your@email.com']) }}
     {{ Form::password('password', ['placeholder' => 'Choose password']) }}
     {{ Form::submit('Sign up') }}
+    {{ Form::close() }}
+
+</div>
+<div class="email_box sign_in" style="display: none">
+
+    {{ Form::open(['url' => '/login', 'method' => 'post']) }}
+    {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
+    {{ Form::password('password', ['placeholder' => 'Choose password']) }}
+    {{ Form::submit('Login') }}
     {{ Form::close() }}
 
 </div>
@@ -43,6 +52,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(function() {
+        $('.login_box').on('click touchstart', function(){
+            if ($('.sign_in').is(':visible')) {
+                $('.sign_in').hide();
+                $('.sign_up').show();
+            } else {
+                $('.sign_in').show();
+                $('.sign_up').hide();
+            }
+        });
+
         setTimeout(function(){
             $('.startscreen').animate({'left': - ($('body').width()) + 'px'}, 1500);
         }, 2100);
