@@ -31,7 +31,7 @@
         $('.username_search').on('keyup', function(){
             $.ajax({
                 type: 'POST',
-                url: '../api/search',
+                url: '/api/search',
                 data: { username: $('.username_search').val() },
                 dataType: 'html',
                 success: function(data){
