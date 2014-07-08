@@ -21,7 +21,7 @@ class SessionsController extends \BaseController {
      */
 	public function create()
 	{
-		if (Auth::attempt([Input::get('username'), Input::get('password')])) return Redirect::route('friends');
+		if (Auth::attempt(['username' => Input::get('username'), 'password' => Input::get('password')])) return Redirect::route('friends');
 
         return Redirect::to('/');
 	}
