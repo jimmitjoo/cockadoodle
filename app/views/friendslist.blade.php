@@ -10,15 +10,14 @@
     <h1>Your awesome friends</h1>
 
     <ul class="friends_list">
-    @foreach ($friends as $f)
-    <li> {{ $f['email'] }} </li>
-    @endforeach
-    <li>
-        <input type="text" name="query" class="username_search" placeholder="Search for friends">
-    </li>
-    <li class="result"></li>
-    </ul>
+        @foreach ($friends as $f)
+        <li> {{ $f['email'] }} </li>
+        @endforeach
 
+        <li><input type="text" name="query" class="username_search" placeholder="Search for friends"></li>
+
+        <li class="result"></li>
+    </ul>
 
     <br /><br /> <a href="/logout">Yeah, or logout here, or whatever you prefer...</a>
 
