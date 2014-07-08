@@ -29,9 +29,13 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(function() {
-        $('.username_search').on('keyup', function(){
+        $('.username_search').on('submit', function(){
             $.ajax({
-                url: '/api/'
+                type: 'POST',
+                url: '/api/search',
+                data: { user: $('.username_search').val() }
+            }).done(function(data){
+                alert('searching...');
             });
             //alert('key pressed!');
         });
