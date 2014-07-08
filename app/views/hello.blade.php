@@ -62,7 +62,7 @@
         });
 
         setTimeout(function(){
-            $('.startscreen').animate({'left': - ($('body').width()) + 'px'}, 1500);
+            $('.startscreen').animate({'left': - ($('body').width()) + 'px'}, 1000);
         }, 3100);
     });
 </script>
