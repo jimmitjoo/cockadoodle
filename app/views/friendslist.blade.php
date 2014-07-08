@@ -28,7 +28,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(function() {
-        $('.username_search').on('submit', function(){
+        $('.username_search').on('keyup', function(){
             $.ajax({
                 type: 'POST',
                 url: '/api/search',
