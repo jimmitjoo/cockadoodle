@@ -22,10 +22,7 @@ Route::get('/login', function(){
 });
 
 Route::resource('/user', 'UsersController');
-Route::get('/logout', function(){
-    Auth::logout();
-    return Redirect::to('/');
-});
+Route::get('/logout', 'SessionsController@destroy');
 Route::post('/login', 'SessionsController@create');
 
 Route::get('/fbver', 'UsersController@facebook');
