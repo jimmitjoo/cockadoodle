@@ -57,11 +57,11 @@
             if ($('.sign_in').is(':visible')) {
                 $('.sign_in').hide();
                 $('.sign_up').show();
-                $this.text('Sign up');
+                $this.text('Login');
             } else {
                 $('.sign_in').show();
                 $('.sign_up').hide();
-                $this.text('Login');
+                $this.text('Sign up');
             }
         });
 
