@@ -16,6 +16,7 @@
     <li>
         <input type="text" name="username" class="username_search" placeholder="Search for friends">
     </li>
+    <li class="result"></li>
     </ul>
 
 
@@ -33,7 +34,7 @@
                 url: '/api/search',
                 data: { user: $('.username_search').val() }
             }).done(function(data){
-                alert('searching...');
+                $('.result').replaceWith(data);
             });
             //alert('key pressed!');
         });
