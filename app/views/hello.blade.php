@@ -1,6 +1,6 @@
 @extends('master/master')
 
-@section('title', 'Cock A Doodle')
+@section('title', 'Cock-A-Doodle')
 @section('meta')
 <!--<meta http-equiv="refresh" content="2;URL=/login">-->
 @stop
