@@ -26,6 +26,7 @@ Route::get('/logout', function(){
     Auth::logout();
     return Redirect::to('/');
 });
+Route::post('/login', 'SessionsController@create');
 
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friendslist', ['as' => 'friends', 'uses' => 'FriendsController@index']);

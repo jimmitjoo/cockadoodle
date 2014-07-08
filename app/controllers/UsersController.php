@@ -141,7 +141,6 @@ class UsersController extends \BaseController {
                 $u->save();
             }
 
-
             Auth::login($u);
 
             return Redirect::route('friends');
