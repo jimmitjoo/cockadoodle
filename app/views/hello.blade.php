@@ -56,15 +56,9 @@
             $this = $(this);
             $('.sign_in').toggle();
             $('.sign_up').toggle();
-            //$signin = $('.sign_in');
-            //$signup = $('.sign_up');
-            if ($signin.is(':visible')) {
-                //$signin.hide();
-                //$signup.show();
+            if ($('.sign_in').is(':visible')) {
                 $this.text('Login');
             } else {
-                //$signin.show();
-                //$signup.hide();
                 $this.text('Sign up');
             }
         });
