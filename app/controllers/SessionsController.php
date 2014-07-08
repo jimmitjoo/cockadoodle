@@ -13,15 +13,15 @@ class SessionsController extends \BaseController {
 		//
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /sessions/create
-	 *
-	 * @return Response
-	 */
-	public function create(array $credentials)
+    /**
+     * Show the form for creating a new resource.
+     * GET /sessions/create
+     *
+     * @return Response
+     */
+	public function create()
 	{
-		if (Auth::attempt($credentials)) return Redirect::route('friends');
+		if (Auth::attempt([Input::get('username'), Input::get('password')])) return Redirect::route('friends');
 
         return Redirect::to('/');
 	}
