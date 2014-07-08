@@ -18,10 +18,11 @@ class FriendsController extends \BaseController {
     public function search()
     {
         $query = Input::get('query');
-        if (strlen($query) < 3) return ' ';
+        if (strlen($query) > 3) {
 
-        $users = User::where('username', 'LIKE', '%' . $query . '%')->orWhere('email', 'LIKE', '%' . $query . '%')->get();
+            $users = User::where('username', 'LIKE', '%' . $query . '%')->orWhere('email', 'LIKE', '%' . $query . '%')->get();
 
-        return View::make('friendssearch')->withMatches($users);
+            return View::make('friendssearch')->withMatches($users);
+        }
     }
 }

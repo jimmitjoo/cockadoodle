@@ -28,18 +28,23 @@
 <script>
     $(function() {
         $('.username_search').on('keyup', function(){
-            $.ajax({
-                type: 'GET',
-                url: '/api/search',
-                data: { query: $('.username_search').val() },
-                dataType: 'html',
-                success: function(data){
-                    $('.result').replaceWith(data);
-                },
-                error: function(data) {
-                    alert('error');
-                }
-            });
+
+            if ($('.username_search').val().length < 3) {
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/search',
+                    data: { query: $('.username_search').val() },
+                    dataType: 'html',
+                    success: function(data){
+                        $('.result').replaceWith(data);
+                    },
+                    error: function(data) {
+                        alert('error');
+                    }
+                });
+            } else {
+                $('.result').html('');
+            }
         });
     });
 </script>
