@@ -18,6 +18,7 @@ class FriendsController extends \BaseController {
     public function search()
     {
         $query = Input::get('query');
+        if (strlen($query) < 3) return View::make('friendssearch');
 
         $users = User::where('username', 'LIKE', '%' . $query . '%')->orWhere('email', 'LIKE', '%' . $query . '%')->get();
 
