@@ -54,13 +54,17 @@
     $(function() {
         $('.login_box').on('click touchstart', function(){
             $this = $(this);
-            if ($('.sign_in').is(':visible')) {
-                $('.sign_in').hide();
-                $('.sign_up').show();
+            $('.sign_in').toggle();
+            $('.sign_up').toggle();
+            //$signin = $('.sign_in');
+            //$signup = $('.sign_up');
+            if ($signin.is(':visible')) {
+                //$signin.hide();
+                //$signup.show();
                 $this.text('Login');
             } else {
-                $('.sign_in').show();
-                $('.sign_up').hide();
+                //$signin.show();
+                //$signup.hide();
                 $this.text('Sign up');
             }
         });
