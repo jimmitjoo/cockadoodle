@@ -33,6 +33,7 @@
                 type: 'POST',
                 url: '../api/search',
                 data: { username: $('.username_search').val() },
+                dataType: 'html',
                 success: function(data){
                     $('.result').replaceWith(data);
                 },
