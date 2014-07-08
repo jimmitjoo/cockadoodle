@@ -64,6 +64,9 @@
         setTimeout(function(){
             $('.startscreen').animate({'left': - ($('body').width()) + 'px'}, 1000);
         }, 3100);
+        setTimeout(function(){
+            $('.startscreen').remove();
+        }, 4500);
     });
 </script>
 @stop
