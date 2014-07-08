@@ -41,8 +41,8 @@
 <div class="email_box sign_in">
 
     {{ Form::open(['url' => '/login', 'method' => 'post']) }}
-    {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
-    {{ Form::password('password', ['placeholder' => 'Choose password']) }}
+    {{ Form::text('username', '', ['placeholder' => 'Username']) }}
+    {{ Form::password('password', ['placeholder' => 'Password']) }}
     {{ Form::submit('Login') }}
     {{ Form::close() }}
 
