@@ -32,7 +32,7 @@
             $.ajax({
                 type: 'GET',
                 url: '/api/search',
-                data: { username: $('.username_search').val() },
+                data: { query: $('.username_search').val() },
                 dataType: 'html',
                 success: function(data){
                     $('.result').replaceWith(data);
