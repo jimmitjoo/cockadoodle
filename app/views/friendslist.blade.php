@@ -14,9 +14,7 @@
     <li> {{ $f['email'] }} </li>
     @endforeach
     <li>
-        {{ Form::open() }}
-        {{ Form::text('username', '', ['placeholder' => 'Search for friends', 'class' => 'username_search']) }}
-        {{ Form::close() }}
+        <input type="text" name="username" class="username_search" placeholder="Search for friends">
     </li>
     </ul>
 
