@@ -14,7 +14,7 @@
     <li> {{ $f['email'] }} </li>
     @endforeach
     <li>
-        <input type="text" name="username" class="username_search" placeholder="Search for friends">
+        <input type="text" name="query" class="username_search" placeholder="Search for friends">
     </li>
     <li class="result"></li>
     </ul>
