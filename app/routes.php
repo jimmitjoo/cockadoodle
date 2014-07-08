@@ -11,19 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-    if (Auth::check()) return Redirect::route('friends');
+// Views
+Route::get('/', 'PagesController@startpage');
+Route::get('/login', 'PagesController@login');
 
-	return View::make('hello');
-});
-Route::get('/login', function(){
-    return View::make('login');
-});
-
+// User resources
 Route::resource('/user', 'UsersController');
 Route::get('/logout', 'SessionsController@destroy');
 Route::post('/login', 'SessionsController@create');
 
+// Logged in
 Route::get('/fbver', 'UsersController@facebook');
-Route::get('/friendslist', ['as' => 'friends', 'uses' => 'FriendsController@index']);
+Route::get('/friendslist', ['as' => 'friends', 'uses' => 'FriendsController@index'])->before('logged_in');
