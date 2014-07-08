@@ -56,10 +56,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('logged_in', function()
 {
-    if (!Auth::check()) return 'Logga in';
-
-    return 'Välkommen';
-
+    if (!Auth::check()) return Redirect::to('/');
 });
 
 /*
