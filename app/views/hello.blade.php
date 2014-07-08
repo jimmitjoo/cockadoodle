@@ -26,7 +26,7 @@
     Login
 </div>
 
-<div class="email_box sign_up">
+<div class="email_box sign_up" style="display: none">
 
     {{ Form::open(['url' => '/user', 'method' => 'post']) }}
     {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
@@ -38,7 +38,7 @@
     <a href="#" class="login_to_account">Login</a>
 
 </div>
-<div class="email_box sign_in" style="display: none">
+<div class="email_box sign_in">
 
     {{ Form::open(['url' => '/login', 'method' => 'post']) }}
     {{ Form::text('username', '', ['placeholder' => 'Choose username']) }}
@@ -46,7 +46,7 @@
     {{ Form::submit('Login') }}
     {{ Form::close() }}
 
-    <a href="#" class="create_account">Create new account</a>
+    <a href="#" class="create_account">Sign up</a>
 
 </div>
 
