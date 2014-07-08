@@ -32,11 +32,14 @@
             $.ajax({
                 type: 'POST',
                 url: '/api/search',
-                data: { username: $('.username_search').val() }
-            }).done(function(data){
-                $('.result').replaceWith(data);
-            });
-            //alert('key pressed!');
+                data: { username: $('.username_search').val() },
+                success: function(data){
+                    $('.result').replaceWith(data);
+                },
+                error: function(data) {
+                    alert('error');
+                }
+            })
         });
     });
 </script>
