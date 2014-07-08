@@ -17,7 +17,7 @@ class FriendsController extends \BaseController {
 
     public function search()
     {
-        $users = User::where('username', 'LIKE', '%' . Input::get('username') . '%')->get();
+        $users = User::where('username', 'LIKE', '%' . Input::get('username') . '%')->orWhere('email', 'LIKE', '%' . Input::get('email') . '%')->get();
 
         return View::make('friendssearch')->withMatches($users);
     }
