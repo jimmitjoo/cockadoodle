@@ -25,7 +25,7 @@
       <file leaf-file-name="friendslist.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/friendslist.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="332" selection-end="332" vertical-scroll-proportion="0.27919912" vertical-offset="154" max-vertical-offset="1053">
+            <state line="16" column="56" selection-start="389" selection-end="389" vertical-scroll-proportion="0.21913236" vertical-offset="235" max-vertical-offset="1134">
               <folding />
             </state>
           </provider>
@@ -740,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/friendslist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="332" selection-end="332" vertical-scroll-proportion="0.27919912" vertical-offset="154" max-vertical-offset="1053">
+        <state line="16" column="56" selection-start="389" selection-end="389" vertical-scroll-proportion="0.21913236" vertical-offset="235" max-vertical-offset="1134">
           <folding />
         </state>
       </provider>
