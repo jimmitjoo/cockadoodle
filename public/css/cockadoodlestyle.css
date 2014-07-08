@@ -133,6 +133,7 @@ body {
     margin-left: 30%;
     font-size: 12px;
     text-transform: uppercase;
+    float: left;
 }
 
 .login_box {
