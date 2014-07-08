@@ -9,7 +9,7 @@
 <div class="startscreen">
     <div class="logo">
         <video style="width: 100%; height: 100%" autoplay="autoplay">
-            <source src="videos/Cad_Logo_anim_mk1.mp4.mp4" type="video/mp4">
+            <source src="videos/Cad_Logo_anim_mk2.mp4.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
