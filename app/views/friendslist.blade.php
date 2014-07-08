@@ -30,7 +30,10 @@
 <script>
     $(function() {
         $('.username_search').on('keyup', function(){
-            alert('key pressed!');
+            $.ajax({
+                url: '/api/'
+            });
+            //alert('key pressed!');
         });
     });
 </script>

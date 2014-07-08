@@ -14,5 +14,5 @@ Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friends', ['as' => 'friends', 'uses' => 'FriendsController@index']);
 
 // Search friends
-Route::post('/api/search', 'FriendsController@search')->before('logged_in');
+Route::post('/api/search', 'FriendsController@search');
 //Route::post('/search', 'FriendsController@search')->before('logged_in');
