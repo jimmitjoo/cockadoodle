@@ -18,4 +18,4 @@ Route::get('/api/search', 'FriendsController@search');
 //Route::post('/search', 'FriendsController@search')->before('logged_in');
 
 // Api uris
-Route::get('/api/facebook_auth', 'UsersController@facebook');
+Route::get('/api/facebook_auth', 'UsersController@facebook_external');

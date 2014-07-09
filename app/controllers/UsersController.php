@@ -157,4 +157,59 @@ class UsersController extends \BaseController {
 
     }
 
+
+    public function facebook_external()
+    {
+
+        // get data from input
+        $code = Input::get( 'code' );
+
+        // get fb service
+        $fb = OAuth::consumer( 'Facebook' );
+
+        // if code is provided get user data and sign in
+        if ( !empty( $code ) ) {
+
+            // This was a callback request from facebook, get the token
+            $token = $fb->requestAccessToken( $code );
+
+            // Send a request with it
+            $result = json_decode( $fb->request( '/me' ), true );
+
+            if (
+                User::where('facebook_identification', '=', $result['id'])->count() == 0 &&
+                User::where('email', '=', $result['email'])->count() == 0
+            ) {
+                $user = new User();
+                $user->email = $result['email'];
+                $user->facebook_identification = $result['id'];
+                $user->username = $result['first_name']. ' ' . $result['last_name'];
+                $user->save();
+            }
+
+            $u = User::where('email', '=', $result['email'])->first();
+            if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
+
+
+            if (!$u->username || empty($u->username)) {
+                $u->username = $result['first_name']. ' ' . $result['last_name'];
+                $u->save();
+            }
+
+            Auth::login($u);
+
+            return Redirect::back();
+
+        }
+        // if not ask for permission first
+        else {
+            // get fb authorization
+            $url = $fb->getAuthorizationUri();
+
+            // return to facebook login url
+            return Redirect::to( (string)$url );
+        }
+
+    }
+
 }
