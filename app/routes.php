@@ -16,3 +16,6 @@ Route::get('/friends', ['as' => 'friends', 'uses' => 'FriendsController@index'])
 // Search friends
 Route::get('/api/search', 'FriendsController@search');
 //Route::post('/search', 'FriendsController@search')->before('logged_in');
+
+// Api uris
+Route::get('/api/facebook_auth', 'UsersController@facebook');
