@@ -22,7 +22,7 @@ class FriendsController extends \BaseController {
 
             $users = User::where('username', 'LIKE', '%' . $query . '%')
                 //->orWhere('email', 'LIKE', '%' . $query . '%')
-                ->get();
+                ->get(5);
 
             return View::make('friendssearch')->withMatches($users);
         }
