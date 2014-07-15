@@ -26,11 +26,8 @@ class GamesController extends \BaseController {
 
         $existingGames = Game::where('first_player_id', '=', $current_user)->where('second_player_id', '=', $other_user)->first();
 
-        if ($existingGames->count() == 0) $existingGames = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first();
-
-        return $existingGames;
-        
-        if ($existingGames->count() > 0) return $existingGames;
+        if ($existingGames->id) $existingGames = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first();
+        if ($existingGames->id) return $existingGames;
 
         $game = new Game();
         $game->first_player_id = $current_user;
