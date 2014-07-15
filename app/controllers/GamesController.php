@@ -21,8 +21,11 @@ class GamesController extends \BaseController {
 	 */
 	public function create()
 	{
-        if (Auth::check()) $current_user = Auth::id();
-        else $current_user = Input::get('sess_id');
+        if (Auth::id()) {
+            $current_user = Auth::id();
+        } else {
+            $current_user = Input::get('sess_id');
+        }
 
         $other_user = Input::get('user_id');
 
