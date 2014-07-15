@@ -171,7 +171,7 @@ class UsersController extends \BaseController {
         if ( !empty( $code ) ) {
 
             // This was a callback request from facebook, get the token
-            $token = $fb->requestAccessToken( $code );
+            $fb->requestAccessToken( $code );
 
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
