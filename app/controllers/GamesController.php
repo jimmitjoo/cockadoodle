@@ -28,6 +28,10 @@ class GamesController extends \BaseController {
         //if ($existingGames->id) $existingGames = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first();
         //if ($existingGames->id) return $existingGames;
 
+        if ($game = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first()) {
+            return $game;
+        }
+
         $game = new Game();
         $game->first_player_id = $current_user;
         $game->second_player_id = $other_user;
