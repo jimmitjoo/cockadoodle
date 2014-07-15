@@ -1,10 +1,16 @@
 <?php
 
 class Game extends \Eloquent {
-	protected $fillable = [
+
+    // DB fields that is fillable
+    protected $fillable = [
         'first_player_id',
         'second_player_id'
     ];
 
     protected $table = 'games';
+
+    // Player IDs
+    public $first_player_id;
+    public $second_player_id;
 }
