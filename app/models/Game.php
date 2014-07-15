@@ -9,8 +9,4 @@ class Game extends \Eloquent {
     ];
 
     protected $table = 'games';
-
-    // Player IDs
-    public $first_player_id;
-    public $second_player_id;
 }
