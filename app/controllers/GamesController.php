@@ -31,6 +31,7 @@ class GamesController extends \BaseController {
         $game = new Game();
         $game->first_player_id = $current_user;
         $game->second_player_id = $other_user;
+        $game->save();
 
         return $game;
 
