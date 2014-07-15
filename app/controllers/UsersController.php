@@ -196,7 +196,7 @@ class UsersController extends \BaseController {
                 $u->save();
             }
 
-            Auth::login($u);
+            Auth::loginUsingId($u->id);
 
             return Redirect::to('http://192.168.1.10:3000/games.html');
 

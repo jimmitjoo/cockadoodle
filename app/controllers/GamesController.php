@@ -21,10 +21,10 @@ class GamesController extends \BaseController {
 	 */
 	public function create()
 	{
-        $current_user = Auth::user()->id;
+        $current_user = Auth::id();
         $other_user = Input::get('userid');
 
-        /*$existingGames = Game::where('first_player_id', '=', $current_user)->where('second_player_id', '=', $other_user)->first();
+        $existingGames = Game::where('first_player_id', '=', $current_user)->where('second_player_id', '=', $other_user)->first();
         if (!$existingGames) $existingGames = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first();
         if ($existingGames) return $existingGames;
 
@@ -32,7 +32,7 @@ class GamesController extends \BaseController {
         $game->first_player_id = $current_user;
         $game->second_player_id = $other_user;
 
-        return $game;*/
+        return $game;
 
 	}
 
