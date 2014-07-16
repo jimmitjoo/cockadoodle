@@ -198,7 +198,7 @@ class UsersController extends \BaseController {
 
             Auth::login($u);
 
-            return Redirect::to('http://192.168.1.10:3000/games.html');
+            return Auth::user();
 
         }
         // if not ask for permission first
