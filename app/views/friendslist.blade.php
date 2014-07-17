@@ -200,6 +200,7 @@ $(function(){
 
     var startedDrawing = false;
     $('#canvas').on('touchstart', function(e){
+        e.preventDefault();
         $('.background_text').fadeOut();
 
         var fingerX = e.originalEvent.touches[0].pageX - this.offsetLeft;
