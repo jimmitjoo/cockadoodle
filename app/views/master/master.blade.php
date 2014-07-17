@@ -12,28 +12,6 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/cockadoodlestyle.css">
 
-        <style>
-            #sketch {
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 0;
-            }
-            #canvasDiv {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: block;
-                z-index: 0;
-                background: transparent;
-                overflow: hidden;
-            }
-        </style>
-
     @include('partials/apple-icons')
 </head>
 <body>
