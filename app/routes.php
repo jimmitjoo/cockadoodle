@@ -20,3 +20,4 @@ Route::get('/api/search', 'FriendsController@search');
 // Api uris
 Route::get('/api/facebook_auth', 'UsersController@facebook_external');
 Route::get('/api/create_game', 'GamesController@create');
+Route::get('/api/save_drawing', 'DrawingsController@save');

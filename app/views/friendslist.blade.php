@@ -20,6 +20,10 @@
     <li class="send">Send</li>
 </ul>
 
+<div class="doneDiv">
+    <span class="text"></span>
+</div>
+
 <ul class="friends_list">
     <li class="add_friends">
         <span class="original">Friends..</span>
@@ -82,10 +86,11 @@ $(function(){
         }
     });
 
-    var addSwipeToList = function(){
+    var user_id = false;
+    var sess_id = false;
+    var game_id = false;
 
-        var user_id = false;
-        var sess_id = false;
+    var addSwipeToList = function(){
 
         $('.friends_list').trigger('click');
 
@@ -131,6 +136,7 @@ $(function(){
                         dataType: 'json'
 
                     }).success(function(data){
+                        game_id = data.id;
                         alert('game id: ' + data.id);
                     }).error(function(){
                         alert('game not created');
@@ -284,6 +290,35 @@ $(function(){
         context = canvas.getContext("2d");
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.beginPath();
+    });
+
+    $('.send').on('touchstart', function(){
+        var canvas = document.getElementById('canvas');
+
+        // save doodle
+        var image_url = canvas.toDataURL();
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://cockadoodle.in/api/save_drawing',
+            data: {
+                data_uri: image_url,
+                drawer_id: sess_id,
+                receiver_id: user_id,
+                game_id: game_id
+            },
+            cache: false,
+            dataType: 'html'
+        });
+
+        // send doodle, maybe that's done when sending to the game table?
+
+
+        // display message that confirm it is sent
+        $('.doneDiv .text').text('Doodle sent to your friend.');
+        $('.doneDiv').slideDown();
+        canvas.remove();
+
     });
 
 });
