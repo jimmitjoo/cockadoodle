@@ -26,8 +26,10 @@ class DrawingsController extends \BaseController {
         $receiver   = Input::get('receiver_id');
         $game       = Input::get('game_id');
 
-        $newImg = imagecreatefromstring(base64_decode( $image ));
-        imagepng($newImg , "doodle-" . time() . ' - ' . rand(0,1000) . ".png");
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace(' ', '+', $image);
+        $data = base64_decode( $image );
+        file_put_contents( "doodle-" . time() . ' - ' . rand(0,1000) . ".png", $data );
 
         $doodle = new Doodle();
         $gameRound = new GameRound();
