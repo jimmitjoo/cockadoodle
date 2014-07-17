@@ -29,13 +29,19 @@ class DrawingsController extends \BaseController {
         $image = str_replace('data:image/png;base64,', '', $image);
         $image = str_replace(' ', '+', $image);
         $data = base64_decode( $image );
-        file_put_contents( "doodle-" . time() . ' - ' . rand(0,1000) . ".png", $data );
+
+        // If directory doodles doesn't exists, create it
+        if (!file_exists('doodles')) mkdir('doodles', 0777);
+
+        // Set doodlename and create file
+        $doodleName = "doodles/doodle-" . time() . '-' . rand(0,1000) . ".png";
+        file_put_contents( $doodleName, $data );
 
         $doodle = new Doodle();
         $gameRound = new GameRound();
 
         $doodle->drawer_id = $drawer;
-        $doodle->doodle_uri = $image;
+        $doodle->doodle_uri = $doodleName;
         $doodle->save();
 
         $gameRound->drawer_id = $drawer;
