@@ -57,23 +57,18 @@
 </ul>
 
 
-<script src="cordova.js"></script>
-
-
 @stop
 
 @section('scripts')
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <script src="js/jquery.js"></script>
 <script src="js/touchswipe.js"></script>
-<script src="js/cockadoodle.js"></script>
-<script src="js/index.js"></script>
 
 <script>
 $(function(){
 
     $('.original').on('touchstart', function(e){
-        $that = $('.add_friends')
+        $that = $('.add_friends');
         $this = $(this);
 
         if ($that.height() < 250) {
@@ -279,7 +274,6 @@ $(function(){
 
     }
 
-
     $('.play_random').on('touchstart', function(){
         alert('4 - Number picked by JAM, guaranteed to be random.');
     });
@@ -292,6 +286,7 @@ $(function(){
     });
 
 });
+
 </script>
 
 @stop

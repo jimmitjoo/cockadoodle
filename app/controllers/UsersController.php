@@ -105,7 +105,6 @@ class UsersController extends \BaseController {
 
     public function facebook()
     {
-
         // get data from input
         $code = Input::get( 'code' );
 
@@ -116,7 +115,7 @@ class UsersController extends \BaseController {
         if ( !empty( $code ) ) {
 
             // This was a callback request from facebook, get the token
-            $token = $fb->requestAccessToken( $code );
+            $fb->requestAccessToken( $code );
 
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
@@ -134,7 +133,6 @@ class UsersController extends \BaseController {
 
             $u = User::where('email', '=', $result['email'])->first();
             if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
-
 
             if (!$u->username || empty($u->username)) {
                 $u->username = $result['first_name']. ' ' . $result['last_name'];
