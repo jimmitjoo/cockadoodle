@@ -22,7 +22,6 @@ class DrawingsController extends \BaseController {
 	public function create()
 	{
 		$image      = Input::get('data_uri');
-        $drawer     = Input::get('drawer_id');
         $receiver   = Input::get('receiver_id');
         $game       = Input::get('game_id');
 
@@ -40,11 +39,11 @@ class DrawingsController extends \BaseController {
         $doodle = new Doodle();
         $gameRound = new GameRound();
 
-        $doodle->drawer_id = $drawer;
+        $doodle->drawer_id = Auth::id();
         $doodle->doodle_uri = $doodleName;
         $doodle->save();
 
-        $gameRound->drawer_id = $drawer;
+        $gameRound->drawer_id = Auth::id();
         $gameRound->receiver_id = $receiver;
         $gameRound->doodle_id = $doodle->id;
         $gameRound->game_id = $game;
