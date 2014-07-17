@@ -16,7 +16,7 @@
 </div>
 
 
-<a href="/api/facebook_auth" class="facebook_box">
+<a href="/fbver" class="facebook_box">
     <div class="facebook_logo">
         <i class="fa fa-facebook-square"></i>
     </div>
