@@ -98,7 +98,7 @@ $(function(){
 
         $('.friends_list').trigger('click');
 
-        $('.friends_list [class^="cock_"], .res-item').swipe({
+        $('.friends_list [class*="cock_"], .res-item').swipe({
             tap: function(){
                 user_id = $(this).data('userid');
                 sess_id = $(this).data('sessid');
