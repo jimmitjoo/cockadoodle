@@ -98,7 +98,7 @@ $(function(){
 
         $('.friends_list').trigger('click');
 
-        $('.cock_received, .res-item').swipe({
+        $('.friends_list [class^="cock_"], .res-item').swipe({
             tap: function(){
                 user_id = $(this).data('userid');
                 sess_id = $(this).data('sessid');
@@ -210,7 +210,8 @@ $(function(){
 
     var startedDrawing = false;
     $('#canvas').on('touchstart', function(e){
-        e.preventDefault();
+        if (e.target.id == 'canvas') e.preventDefault();
+
         $('.background_text').fadeOut();
 
         var fingerX = e.originalEvent.touches[0].pageX - this.offsetLeft;
