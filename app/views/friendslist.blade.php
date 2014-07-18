@@ -142,13 +142,15 @@ $(function(){
 
                     }).success(function(data){
                         game_id = data.id;
+
+                        $('#canvas').css({'z-index': 10});
                     }).error(function(){
                         alert('game not created');
                     });
 
                     setTimeout(function(){
-                        $('.send').animate({'right':0}, 250);
-                        $('.redo').animate({'left':0}, 250);
+                        $('.send').css({'z-index': 11}).animate({'right':0}, 250);
+                        $('.redo').css({'z-index': 11}).animate({'left':0}, 250);
                     }, 550);
 
                 }
