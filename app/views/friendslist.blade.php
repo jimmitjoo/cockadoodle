@@ -211,7 +211,7 @@ $(function(){
 
     var startedDrawing = false;
     $('#canvas').on('touchstart', function(e){
-        if (e.target.id == 'canvas') e.preventDefault();
+        e.preventDefault();
 
         $('.background_text').fadeOut();
 
