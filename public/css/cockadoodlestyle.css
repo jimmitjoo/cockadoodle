@@ -194,6 +194,8 @@ body {
     float: left;
     display: block;
     padding: 52px 0 0 0;
+    position: relative;
+    z-index: 1;
 }
 .friends_list li {
     width: 100%;
