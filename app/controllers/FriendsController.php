@@ -12,7 +12,7 @@ class FriendsController extends \BaseController {
 	{
         $mygames = GameRound::with('receiver', 'drawer')->where('receiver_id', '=', Auth::id())->get();
 
-        return $mygames;
+        //return $mygames;
 
         return View::make('friendslist')->withMygames($mygames);
 	}
