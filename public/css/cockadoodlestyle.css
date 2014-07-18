@@ -517,7 +517,7 @@ body {
     left: 0;
     z-index: 0;
 }
-#canvasDiv {
+#canvas {
     position: absolute;
     top: 0;
     left: 0;
