@@ -208,6 +208,7 @@ body {
     border-top: 1px solid #eeeeee;
     background: #e1f5fe;
     position: relative;
+    z-index: 2;
 }
 .friends_list li>input {
     width: 90%;

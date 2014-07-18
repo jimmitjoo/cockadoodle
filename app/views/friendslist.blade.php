@@ -210,7 +210,7 @@ $(function(){
 
     var startedDrawing = false;
     $('#canvas').on('touchstart', function(e){
-        if (e.target.id == 'canvas') e.preventDefault();
+        //if (e.target.id == 'canvas') e.preventDefault();
 
         $('.background_text').fadeOut();
 
