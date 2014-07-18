@@ -75,6 +75,7 @@
 <script>
 $(function(){
 
+
     $('.original').on('touchstart', function(e){
         $that = $('.add_friends');
         $this = $(this);
@@ -210,7 +211,7 @@ $(function(){
 
     var startedDrawing = false;
     $('#canvas').on('touchstart', function(e){
-        //if (e.target.id == 'canvas') e.preventDefault();
+        if (e.target.id == 'canvas') e.preventDefault();
 
         $('.background_text').fadeOut();
 
@@ -325,6 +326,8 @@ $(function(){
         canvas.remove();
 
     });
+
+    addSwipeToList();
 
 });
 
