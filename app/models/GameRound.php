@@ -8,6 +8,6 @@ class GameRound extends \Eloquent {
 
     public function receiver()
     {
-        $this->hasOne('User', 'receiver_id');
+        return $this->hasOne('User', 'receiver_id');
     }
 }
