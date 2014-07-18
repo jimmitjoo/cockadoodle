@@ -143,7 +143,7 @@ $(function(){
                     }).success(function(data){
                         game_id = data.id;
 
-                        $('#canvas').css({'z-index': 10});
+                        $('#canvasDiv').css({'z-index': 10});
                     }).error(function(){
                         alert('game not created');
                     });
