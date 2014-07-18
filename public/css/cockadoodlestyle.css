@@ -385,13 +385,15 @@ body {
 .friends_list li.cock_hidden_need_grade:before,
 .friends_list li.cock_graded:before {
     width: 45%;
+    height: 70px;
     padding-left: 5%;
-    content: 'Ask4 Cock';
+    content: '';
     position: absolute;
     opacity: 0;
     top: 0;
     z-index: 10;
-    background: rgba(66, 189, 65, .9);
+    background: rgba(66, 189, 65, .9) url('/img/Ask4Cock_icon_V1.png') no-repeat left 5% top 0;
+    background-size: 143px 70px;
 }
 
 .friends_list li.cock_base:after,
