@@ -149,8 +149,9 @@ $(function(){
                     });
 
                     setTimeout(function(){
-                        $('.send').css({'z-index': 11}).animate({'right':0}, 250);
-                        $('.redo').css({'z-index': 11}).animate({'left':0}, 250);
+                        $('.menu li').css({'z-index': 11});
+                        $('.send').animate({'right':0}, 250);
+                        $('.redo').animate({'left':0}, 250);
                     }, 550);
 
                 }
