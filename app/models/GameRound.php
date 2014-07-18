@@ -8,7 +8,7 @@ class GameRound extends \Eloquent {
 
     public function receiver()
     {
-        return $this->hasOne('User', 'receiver_id');
+        return $this->belongsTo('User', 'receiver_id');
     }
 
 }
