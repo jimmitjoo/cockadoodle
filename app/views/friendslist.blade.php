@@ -69,8 +69,8 @@
 
 @section('scripts')
 
-<script src="js/jquery.js"></script>
-<script src="js/touchswipe.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/touchswipe.js"></script>
 
 <script>
 $(function(){
