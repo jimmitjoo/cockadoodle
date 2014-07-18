@@ -21,7 +21,8 @@ class DrawingsController extends \BaseController {
 	 */
 	public function create()
 	{
-		$image      = Input::get('data_uri');
+
+        $image      = Input::get('data_uri');
         $receiver   = Input::get('receiver_id');
         $game       = Input::get('game_id');
 
@@ -32,7 +33,7 @@ class DrawingsController extends \BaseController {
         // If directory doodles doesn't exists, create it
         if (!file_exists('doodles')) mkdir('doodles', 0777);
 
-        // Set doodlename and create file
+        // Set doodleName and create file
         $doodleName = "doodles/doodle-" . time() . '-' . rand(0,1000) . ".png";
         file_put_contents( $doodleName, $data );
 

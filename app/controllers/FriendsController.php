@@ -10,9 +10,11 @@ class FriendsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $friends = User::all();
+        $mygames = GameRound::where('receiver_id', '=', Auth::id())->get();
 
-        return View::make('friendslist')->withFriends($friends);
+        return $mygames;
+
+        return View::make('friendslist')->withMygames($mygames);
 	}
 
     public function search()

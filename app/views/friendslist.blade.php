@@ -46,6 +46,10 @@
     </li>
     <li class="results" style="display: none"></li>
     <li class="play_random"><span>Random..</span></li>
+
+    @foreach ($mygames as $g)
+        <li>{{  }}</li>
+    @endforeach
     <!--
     <li class="cock_hidden_need_grade"><span>Friend 1</span></li>
     <li class="cock_graded"><span>Friend 2</span></li>
