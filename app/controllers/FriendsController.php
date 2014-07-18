@@ -10,7 +10,7 @@ class FriendsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $mygames = GameRound::where('receiver_id', '=', Auth::id())->with('receiver')->get();
+        $mygames = GameRound::with('receiver')->where('receiver_id', '=', Auth::id())->get();
 
         return $mygames;
 
