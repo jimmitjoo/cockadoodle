@@ -12,8 +12,6 @@ class FriendsController extends \BaseController {
 	{
         $mygames = GameRound::with('receiver', 'drawer')->where('receiver_id', '=', Auth::id())->distinct('game_id')->orderBy('doodle_id')->get();
 
-        return $mygames;
-
         return View::make('friendslist')->withMygames($mygames);
 	}
 
