@@ -42,9 +42,9 @@ class DrawingsController extends \BaseController {
 	}
 
 
-    public function drawing()
+    public function draw()
     {
-
+        return View::make('drawing');
     }
 
 
