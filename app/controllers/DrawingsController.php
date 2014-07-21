@@ -3,17 +3,6 @@
 class DrawingsController extends \BaseController {
 
 	/**
-	 * Display a listing of the resource.
-	 * GET /drawings
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
-	/**
 	 * Show the form for creating a new resource.
 	 * GET /drawings/create
 	 *
@@ -52,63 +41,11 @@ class DrawingsController extends \BaseController {
 
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /drawings
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /drawings/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+    public function drawing()
+    {
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /drawings/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /drawings/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /drawings/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
 
 }

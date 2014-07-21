@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/cockadoodlestyle.css">
 
+    <style>
+        @yield('styles')
+    </style>
+
     @include('partials/apple-icons')
 </head>
 <body>

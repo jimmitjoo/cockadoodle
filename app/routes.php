@@ -12,6 +12,7 @@ Route::post('/login', 'SessionsController@create');
 // Logged in
 Route::get('/fbver', 'UsersController@facebook');
 Route::get('/friends', ['as' => 'friends', 'uses' => 'FriendsController@index']);
+Route::get('/drawingboard', 'DrawingsController@draw');
 
 // Search friends
 Route::get('/api/search', 'FriendsController@search');
