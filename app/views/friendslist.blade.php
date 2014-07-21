@@ -142,7 +142,7 @@ $(function(){
 
                     }).success(function(data){
 
-                        document.location.href = '/drawingboard?user_id=' + user_id + '&sess_id=' + sess_id;
+                        document.location.href = '/drawingboard?user_id=' + user_id + '&sess_id=' + sess_id + '&game_id=' + game_id;
 
                         game_id = data.id;
                         $('#canvas').css({'z-index': 10});

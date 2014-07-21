@@ -131,9 +131,9 @@ html, body {
         url: 'http://cockadoodle.in/api/save_drawing',
         data: {
         data_uri: image_url,
-        drawer_id: sess_id,
-        receiver_id: user_id,
-        game_id: game_id
+        drawer_id: getUrlVars()["sess_id"],
+        receiver_id: getUrlVars()["user_id"],
+        game_id: getUrlVars()["game_id"]
         },
         cache: false,
         dataType: 'html'
@@ -156,6 +156,15 @@ html, body {
 
     $('.send').animate({'right':0}, 250);
     $('.redo').animate({'left':0}, 250);
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
 
 </script>
 
