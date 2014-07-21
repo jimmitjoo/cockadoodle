@@ -154,6 +154,9 @@ html, body {
         context.beginPath();
     });
 
+    $('.send').animate({'right':0}, 250);
+    $('.redo').animate({'left':0}, 250);
+
 </script>
 
 @stop
