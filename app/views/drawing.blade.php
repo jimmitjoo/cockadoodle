@@ -127,22 +127,27 @@ html, body {
         var image_url = canvas.toDataURL();
 
         $.ajax({
-        type: 'POST',
-        url: 'http://cockadoodle.in/api/save_drawing',
-        data: {
-        data_uri: image_url,
-        drawer_id: getUrlVars()["sess_id"],
-        receiver_id: getUrlVars()["user_id"],
-        game_id: getUrlVars()["game_id"]
-        },
-        cache: false,
-        dataType: 'html'
+            type: 'POST',
+            url: 'http://cockadoodle.in/api/save_drawing',
+            data: {
+                data_uri: image_url,
+                drawer_id: getUrlVars()["sess_id"],
+                receiver_id: getUrlVars()["user_id"],
+                game_id: getUrlVars()["game_id"]
+            },
+            cache: false,
+            dataType: 'html'
         });
 
         // send doodle, maybe that's done when sending to the game table?
 
         // display message that confirm it is sent
-        $('.doneDiv .text').text('Doodle sent to your friend.');
+        $('.doneDiv .text').text('COCK sent to your friend.');
+
+        setTimeout(function(){
+            document.location.href = '/friends';
+        },4000);
+
         $('.doneDiv').slideDown();
         canvas.remove();
     });
