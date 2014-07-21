@@ -468,11 +468,13 @@ body {
     height: 360px;
     font-size: 60px;
     line-height: 80px;
-    color: #eeeeee;
+    color: #f8f8f8;
     text-align: center;
     position: fixed;
     z-index: -1;
     text-transform: uppercase;
+    top: 50%;
+    margin-top: -180px;
 }
 
 
