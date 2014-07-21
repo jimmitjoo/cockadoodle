@@ -46,7 +46,7 @@ html, body {
     $('#canvas').on('touchstart', function(e){
         e.preventDefault();
 
-        $('.background_text').fadeOut();
+        //$('.background_text').fadeOut();
 
         var fingerX = e.originalEvent.touches[0].pageX - this.offsetLeft;
         var fingerY = e.originalEvent.touches[0].pageY - this.offsetTop;

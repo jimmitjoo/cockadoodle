@@ -29,7 +29,7 @@
         <span class="original">Friends..</span>
         <div class="open">
             <input class="searchfield" placeholder="search" type="text"/>
-            <button>
+            <!--<button>
                 Contacts
                         <span class="box">
                             <span class="fa fa-user"></span>
