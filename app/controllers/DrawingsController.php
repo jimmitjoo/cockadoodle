@@ -50,7 +50,7 @@ class DrawingsController extends \BaseController {
     public function hide()
     {
         $game = Game::find(Input::get('game_id'));
-        $lastCock = Doodle::where('doodle_id', '=', $game->doodle_id)->orderBy('id', 'desc')->first();
+        $lastCock = Doodle::where('id', '=', $game->doodle_id)->first();
 
         return View::make('hiding')->withCockId($lastCock->doodle_uri);
     }
