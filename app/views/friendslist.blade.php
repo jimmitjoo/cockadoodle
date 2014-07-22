@@ -49,21 +49,23 @@
 
     @foreach ($mygames as $g)
 
-    @if ($g->game->status == 1 && $g->drawer->id == Auth::id())
-        <?php $cock_class = 'cock_sent'; ?>
-    @elseif ($g->game->status == 2 && $g->drawer->id == Auth::id())
-        <?php $cock_class = 'cock_hidden_need_grade'; ?>
-    @elseif ($g->game->status == 3 && $g->drawer->id == Auth::id())
-        <?php $cock_class = 'cock_grade_sent_wait_for_new'; ?>
-    @if ($g->game->status == 1 && $g->receiver->id == Auth::id())
-        <?php $cock_class = 'cock_received'; ?>
-    @elseif ($g->game->status == 2 && $g->receiver->id == Auth::id())
-        <?php $cock_class = 'cock_waiting_for_grade'; ?>
-    @elseif ($g->game->status == 3 && $g->receiver->id == Auth::id())
-        <?php $cock_class = 'cock_graded'; ?>
-    @else
-        <?php $cock_class = 'cock_base'; ?>
-    @endif
+    <?php
+    if ($g->game->status == 1 && $g->drawer->id == Auth::id()) :
+        $cock_class = 'cock_sent';
+    elseif ($g->game->status == 2 && $g->drawer->id == Auth::id()) :
+        $cock_class = 'cock_hidden_need_grade';
+    elseif ($g->game->status == 3 && $g->drawer->id == Auth::id()) :
+        $cock_class = 'cock_grade_sent_wait_for_new';
+    elseif ($g->game->status == 1 && $g->receiver->id == Auth::id()) :
+        $cock_class = 'cock_received';
+    elseif ($g->game->status == 2 && $g->receiver->id == Auth::id()) :
+        $cock_class = 'cock_waiting_for_grade';
+    elseif ($g->game->status == 3 && $g->receiver->id == Auth::id()) :
+        $cock_class = 'cock_graded';
+    else :
+        $cock_class = 'cock_base';
+    endif;
+    ?>
 
         <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
     @endforeach
