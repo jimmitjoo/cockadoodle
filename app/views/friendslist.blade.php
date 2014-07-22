@@ -47,8 +47,10 @@
     <li class="results" style="display: none"></li>
     <li class="play_random"><span>Random..</span></li>
 
+    <?php dd($mygames); ?>
+
     @foreach ($mygames as $g)
-        <li class="cock_received" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}"><span>{{ $g->drawer->username }}</span></li>
+        <li class="cock_received" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
     @endforeach
     <!--
     <li class="cock_hidden_need_grade"><span>Friend 1</span></li>
