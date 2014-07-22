@@ -48,7 +48,24 @@
     <li class="play_random"><span>Random..</span></li>
 
     @foreach ($mygames as $g)
-        <li class="cock_received" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
+
+    @if ($g->game->status == 1 && $g->drawer->id == Auth::id())
+        <?php $cock_class = 'cock_sent'; ?>
+    @elseif ($g->game->status == 2 && $g->drawer->id == Auth::id())
+        <?php $cock_class = 'cock_hidden_need_grade'; ?>
+    @elseif ($g->game->status == 3 && $g->drawer->id == Auth::id())
+        <?php $cock_class = 'cock_grade_sent_wait_for_new'; ?>
+    @if ($g->game->status == 1 && $g->receiver->id == Auth::id())
+        <?php $cock_class = 'cock_received'; ?>
+    @elseif ($g->game->status == 2 && $g->receiver->id == Auth::id())
+        <?php $cock_class = 'cock_waiting_for_grade'; ?>
+    @elseif ($g->game->status == 3 && $g->receiver->id == Auth::id())
+        <?php $cock_class = 'cock_graded'; ?>
+    @else
+        <?php $cock_class = 'cock_base'; ?>
+    @endif
+
+        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
     @endforeach
     <!--
     <li class="cock_hidden_need_grade"><span>Friend 1</span></li>
@@ -101,7 +118,10 @@ $(function(){
 
         $('.friends_list [class^="cock_"], .res-item').swipe({
             tap: function(){
-
+                user_id = $(this).data('userid');
+                sess_id = $(this).data('sessid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
             },
             swipeLeft: function(e, dir, dis, dur, fc) {
 
@@ -120,12 +140,7 @@ $(function(){
 
             },
             swipeRight: function(e, dir, dis, dur, fc) {
-                if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade'))) {
-
-                    user_id = $(this).data('userid');
-                    sess_id = $(this).data('sessid');
-                    game_id = $(this).siblings().removeClass('active');
-                    $(this).addClass('active');
+                if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade')) && $(this).hasClass('active')) {
 
                     $(this).animate({'right': '-100%'}, 250);
                     $(this).siblings('li').animate({'left': '-100%'}, 500);

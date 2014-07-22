@@ -356,6 +356,11 @@ body {
     border-top: 1px solid #eeca81;
     position: relative;
 }
+.friends_list li.cock_grade_sent_wait_for_new {
+    background: #a3e9a4;
+    border-top: 1px solid #e7e9df;
+    position: relative;
+}
 .friends_list li.cock_sent span,
 .friends_list li.cock_graded span {
     color: #eeeeee;

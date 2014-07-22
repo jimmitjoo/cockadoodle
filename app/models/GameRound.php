@@ -16,6 +16,11 @@ class GameRound extends \Eloquent {
         return $this->belongsTo('User', 'drawer_id');
     }
 
+    public function game()
+    {
+        return $this->belongsTo('Game', 'game_id');
+    }
+
     public function doodle()
     {
         return $this->belongsTo('Doodle');
