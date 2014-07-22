@@ -441,6 +441,7 @@ body {
 .friends_list li.cock_received:after {
     content: '';
     background: rgba(66, 189, 65, .9) url('/img/HideCock_icon_V1.png') no-repeat right 5% top 0;
+    background-size: 143px 70px;
 }
 
 
