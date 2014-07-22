@@ -387,6 +387,7 @@ body {
 }
 
 .friends_list li.cock_base:before,
+.friends_list li.cock_sent:before,
 .friends_list li.cock_received:before,
 .friends_list li.cock_hidden_need_grade:before,
 .friends_list li.cock_graded:before {
@@ -398,8 +399,7 @@ body {
     opacity: 0;
     top: 0;
     z-index: 10;
-    background: rgba(66, 189, 65, .9) url('/img/Ask4Cock_icon_V1.png') no-repeat left 5% top 0;
-    background-size: 143px 70px;
+    background: rgba(66, 189, 65, .9);
 }
 
 .friends_list li.cock_base:after,
