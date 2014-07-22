@@ -10,6 +10,8 @@
     <div class="logo">
         <video style="width: 100%; height: 100%" autoplay="autoplay">
             <source src="videos/Cad_Logo_anim_mk4.mp4.mp4" type="video/mp4">
+            <source src="videos/Cad_Logo_anim_mk4.oggtheora.ogg" type="video/ogg">
+            <source src="videos/Cad_Logo_anim_mk4.webmhd.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
     </div>

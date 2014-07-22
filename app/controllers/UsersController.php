@@ -141,7 +141,9 @@ class UsersController extends \BaseController {
 
             Auth::login($u);
 
-            return Redirect::route('friends');
+            if (Auth::check()) return Redirect::route('friends');
+
+            return Redirect::to('/');
 
         }
         // if not ask for permission first
