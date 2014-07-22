@@ -47,8 +47,6 @@
     <li class="results" style="display: none"></li>
     <li class="play_random"><span>Random..</span></li>
 
-    <?php dd($mygames); ?>
-
     @foreach ($mygames as $g)
         <li class="cock_received" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
     @endforeach
@@ -105,6 +103,7 @@ $(function(){
             tap: function(){
                 user_id = $(this).data('userid');
                 sess_id = $(this).data('sessid');
+                game_id =
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
             },
@@ -144,9 +143,9 @@ $(function(){
 
                     }).success(function(data){
 
+                        game_id = data.id;
                         document.location.href = '/drawingboard?user_id=' + user_id + '&sess_id=' + sess_id + '&game_id=' + game_id;
 
-                        game_id = data.id;
                         $('#canvas').css({'z-index': 10});
                         setTimeout(function(){
                             $('.friends_list').hide();
