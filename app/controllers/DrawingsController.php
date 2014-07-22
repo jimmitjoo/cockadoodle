@@ -52,7 +52,7 @@ class DrawingsController extends \BaseController {
         $game = Game::find(Input::get('game_id'));
 
 
-        $lastCock = Doodle::find($game->doodle_id)
+        $lastCock = Doodle::find($game->doodle_id);
 
         return View::make('hiding');
     }

@@ -115,14 +115,6 @@ $(function(){
     var sess_id = false;
     var game_id = false;
 
-    function animate_friendslist(t) {
-        t.animate({'right': '-100%'}, 250);
-        t.siblings('li').animate({'left': '-100%'}, 500);
-        $('.sticky_headline').animate({'top': '-70px'}, 500);
-
-        user_id = t.data('userid');
-        sess_id = t.data('sessid');
-    }
 
     var addSwipeToList = function(){
 
