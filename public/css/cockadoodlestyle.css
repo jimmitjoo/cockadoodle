@@ -387,7 +387,6 @@ body {
 }
 
 .friends_list li.cock_base:before,
-.friends_list li.cock_sent:before,
 .friends_list li.cock_received:before,
 .friends_list li.cock_hidden_need_grade:before,
 .friends_list li.cock_graded:before {
