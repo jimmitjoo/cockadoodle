@@ -131,7 +131,13 @@ $(function(){
             swipeRight: function() {
                 var t = $(this);
                 if (t.hasClass('active')) {
-                    animate_friendslist(t);
+
+                    t.animate({'right': '-100%'}, 250);
+                    t.siblings('li').animate({'left': '-100%'}, 500);
+                    $('.sticky_headline').animate({'top': '-70px'}, 500);
+
+                    user_id = t.data('userid');
+                    sess_id = t.data('sessid');
 
                     document.location.href = '/hidingboard?user_id=' + user_id + '&sess_id=' + sess_id + '&game_id=' + game_id;
 
@@ -156,7 +162,12 @@ $(function(){
                 var t = $(this);
                 if (t.hasClass('active')) {
 
-                    animate_friendslist(t);
+                    t.animate({'right': '-100%'}, 250);
+                    t.siblings('li').animate({'left': '-100%'}, 500);
+                    $('.sticky_headline').animate({'top': '-70px'}, 500);
+
+                    user_id = t.data('userid');
+                    sess_id = t.data('sessid');
 
                     $.ajax({
 
