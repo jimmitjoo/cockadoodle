@@ -87,7 +87,16 @@
 <script src="/js/touchswipe.js"></script>
 
 <script>
-$(function(){
+    function tap_a_game(user_id, sess_id) {
+        user_id = $(this).data('userid');
+        sess_id = $(this).data('sessid');
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        return {user_id: user_id, sess_id: sess_id};
+    }
+
+
+    $(function(){
 
 
     $('.original').on('touchstart', function(e){
@@ -113,28 +122,17 @@ $(function(){
 
         $('.friends_list').trigger('click');
 
-        $('.friends_list [class^="cock_"], .res-item').swipe({
+        $('.friends_list .cock_received').swipe({
             tap: function(){
-                user_id = $(this).data('userid');
-                sess_id = $(this).data('sessid');
-                $(this).siblings().removeClass('active');
-                $(this).addClass('active');
+
             },
-            swipeLeft: function(e, dir, dis, dur, fc) {
+        })
 
-                alert('Ask for cock');
-
-                /*if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade')) && $(this).hasClass('active')) {
-                 $(this).animate({'left': '-100%'}, 250);
-                 $(this).siblings('li').animate({'right': '-100%'}, 500);
-                 $('.sticky_headline').animate({'top': '-70px'}, 500);
-
-                 setTimeout(function(){
-                 $('.send').animate({'right':0}, 250);
-                 $('.redo').animate({'left':0}, 250);
-                 }, 550);
-                 }*/
-
+        $('.friends_list .cock_base, .res-item').swipe({
+            tap: function() {
+                var __ret = tap_a_game.call(this, user_id, sess_id);
+                user_id = __ret.user_id;
+                sess_id = __ret.sess_id;
             },
             swipeRight: function(e, dir, dis, dur, fc) {
                 if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade')) && $(this).hasClass('active')) {
