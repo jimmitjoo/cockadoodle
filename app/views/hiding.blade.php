@@ -15,7 +15,7 @@ overflow: hidden !important;
     position: fixed;
     top: 0;
     left: 0;
-    background: ???
+    background: url('/{{$cockuri}}') no-repeat center center;
 }
 @stop
 
