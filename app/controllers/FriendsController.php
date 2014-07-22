@@ -10,7 +10,7 @@ class FriendsController extends \BaseController {
 	 */
 	public function index()
 	{
-        $mygames = GameRound::with('receiver', 'drawer', 'game')->where('receiver_id', '=', Auth::id())->distinct('game_id')->orderBy('doodle_id')->get();
+        $mygames = GameRound::with('receiver', 'drawer', 'game')->where('receiver_id', '=', Auth::id())->orWhere('drawer_id', '=', Auth::id())->distinct('game_id')->orderBy('doodle_id')->get();
 
         return View::make('friendslist')->withMygames($mygames);
 	}
