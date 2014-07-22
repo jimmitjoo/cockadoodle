@@ -52,8 +52,6 @@ class DrawingsController extends \BaseController {
         $game = GameRound::where('game_id', '=', Input::get('game_id'))->orderBy('id', 'desc')->first();
         $lastCock = Doodle::where('id', '=', $game['doodle_id'])->first();
 
-        dd($lastCock);
-
         return View::make('hiding')->with('cockuri', $lastCock['doodle_uri']);
     }
 
