@@ -80,7 +80,7 @@
         endif;
         ?>
 
-        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{  }}</span></li>
+        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $username }}</span></li>
     @endforeach
 </ul>
 
