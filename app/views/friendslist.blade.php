@@ -52,21 +52,27 @@
         <?php
         if ($g->game->status == 1 && $g->drawer->id == Auth::id()) :
             $cock_class = 'cock_sent';
+            $username = $g->receiver->username;
 
         elseif ($g->game->status == 2 && $g->drawer->id == Auth::id()) :
             $cock_class = 'cock_hidden_need_grade';
+            $username = $g->receiver->username;
 
         elseif ($g->game->status == 3 && $g->drawer->id == Auth::id()) :
             $cock_class = 'cock_grade_sent_wait_for_new';
+            $username = $g->receiver->username;
 
         elseif ($g->game->status == 1 && $g->receiver->id == Auth::id()) :
             $cock_class = 'cock_received';
+            $username = $g->drawer->username;
 
         elseif ($g->game->status == 2 && $g->receiver->id == Auth::id()) :
             $cock_class = 'cock_waiting_for_grade';
+            $username = $g->drawer->username;
 
         elseif ($g->game->status == 3 && $g->receiver->id == Auth::id()) :
             $cock_class = 'cock_graded';
+            $username = $g->drawer->username;
 
         else :
             echo $g->game->status;
@@ -74,7 +80,7 @@
         endif;
         ?>
 
-        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $g->drawer->username }}</span></li>
+        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{  }}</span></li>
     @endforeach
 </ul>
 
@@ -87,16 +93,7 @@
 <script src="/js/touchswipe.js"></script>
 
 <script>
-    function tap_a_game(user_id, sess_id) {
-        user_id = $(this).data('userid');
-        sess_id = $(this).data('sessid');
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        return {user_id: user_id, sess_id: sess_id};
-    }
-
-
-    $(function(){
+$(function(){
 
 
     $('.original').on('touchstart', function(e){
@@ -118,31 +115,56 @@
     var sess_id = false;
     var game_id = false;
 
+    function animate_friendslist(t) {
+        t.animate({'right': '-100%'}, 250);
+        t.siblings('li').animate({'left': '-100%'}, 500);
+        $('.sticky_headline').animate({'top': '-70px'}, 500);
+
+        user_id = t.data('userid');
+        sess_id = t.data('sessid');
+    }
+
     var addSwipeToList = function(){
 
         $('.friends_list').trigger('click');
 
         $('.friends_list .cock_received').swipe({
             tap: function(){
-
+                user_id = $(this).data('userid');
+                sess_id = $(this).data('sessid');
+                game_id = $(this).data('gameid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
             },
+            swipeRight: function() {
+                var t = $(this);
+                if (t.hasClass('active')) {
+                    animate_friendslist(t);
+
+                    document.location.href = '/hidingboard?user_id=' + user_id + '&sess_id=' + sess_id + '&game_id=' + game_id;
+
+                    setTimeout(function(){
+                        $('.menu li').css({'z-index': 11});
+                        $('.send').animate({'right':0}, 250);
+                        $('.redo').animate({'left':0}, 250);
+                    }, 550);
+                }
+            }
         })
 
         $('.friends_list .cock_base, .res-item').swipe({
-            tap: function() {
-                var __ret = tap_a_game.call(this, user_id, sess_id);
-                user_id = __ret.user_id;
-                sess_id = __ret.sess_id;
+            tap: function(){
+                user_id = $(this).data('userid');
+                sess_id = $(this).data('sessid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
             },
             swipeRight: function(e, dir, dis, dur, fc) {
-                if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade')) && $(this).hasClass('active')) {
 
-                    $(this).animate({'right': '-100%'}, 250);
-                    $(this).siblings('li').animate({'left': '-100%'}, 500);
-                    $('.sticky_headline').animate({'top': '-70px'}, 500);
+                var t = $(this);
+                if (t.hasClass('active')) {
 
-                    user_id = $(this).data('userid');
-                    sess_id = $(this).data('sessid');
+                    animate_friendslist(t);
 
                     $.ajax({
 

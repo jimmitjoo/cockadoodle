@@ -17,6 +17,7 @@ Route::get(
         'uses' => 'FriendsController@index'
     ])->before('auth');
 Route::get('/drawingboard', 'DrawingsController@draw');
+Route::get('/hidingboard', 'DrawingsController@hide');
 
 // Search friends
 Route::get('/api/search', 'FriendsController@search');

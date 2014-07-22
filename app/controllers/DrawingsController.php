@@ -47,5 +47,15 @@ class DrawingsController extends \BaseController {
         return View::make('drawing');
     }
 
+    public function hide()
+    {
+        $game = Game::find(Input::get('game_id'));
+
+
+        $lastCock = Doodle::find($game->doodle_id)
+
+        return View::make('hiding');
+    }
+
 
 }
