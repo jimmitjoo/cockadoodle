@@ -101,11 +101,7 @@ $(function(){
 
         $('.friends_list [class^="cock_"], .res-item').swipe({
             tap: function(){
-                user_id = $(this).data('userid');
-                sess_id = $(this).data('sessid');
-                game_id =
-                $(this).siblings().removeClass('active');
-                $(this).addClass('active');
+
             },
             swipeLeft: function(e, dir, dis, dur, fc) {
 
@@ -124,7 +120,12 @@ $(function(){
 
             },
             swipeRight: function(e, dir, dis, dur, fc) {
-                if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade')) && $(this).hasClass('active')) {
+                if ((!$(this).hasClass('cock_sent') && !$(this).hasClass('cock_hidden_need_grade'))) {
+
+                    user_id = $(this).data('userid');
+                    sess_id = $(this).data('sessid');
+                    game_id = $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
 
                     $(this).animate({'right': '-100%'}, 250);
                     $(this).siblings('li').animate({'left': '-100%'}, 500);
