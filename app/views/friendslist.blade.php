@@ -80,7 +80,7 @@
         endif;
         ?>
 
-        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $username }}</span></li>
+        <li class="{{ $cock_class }} waves-effect" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $username }}</span></li>
     @endforeach
 </ul>
 
@@ -91,6 +91,7 @@
 
 <script src="/js/jquery.js"></script>
 <script src="/js/touchswipe.js"></script>
+<script src="/js/waves.js"></script>
 
 <script>
 $(function(){
