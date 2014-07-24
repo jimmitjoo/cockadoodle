@@ -55,7 +55,7 @@
             $userid = $g->second_player_id;
 
         elseif ($g->status == 2 && $g->first_player_id == Auth::id()) :
-            $cock_class = 'cock_hidden_need_grade';
+            $cock_class = 'cock_hidden_now_needs_review';
             $username = $g->second_player->username;
             $userid = $g->second_player_id;
 

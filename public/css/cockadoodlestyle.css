@@ -351,6 +351,10 @@ body {
     border-top: 1px solid #eee4ae;
     position: relative;
 }
+.friends_list li.cock_hidden_now_needs_review {
+    background: #42bd41;
+    border-top: 1px solid #a4fc9f;
+}
 .friends_list li.cock_graded {
     background: #ff6f00;
     border-top: 1px solid #eeca81;
@@ -374,11 +378,13 @@ body {
 .friends_list li.cock_sent:before,
 .friends_list li.cock_received:before,
 .friends_list li.cock_waiting_for_grade:before,
+.friends_list li.cock_hidden_now_needs_review:before,
 .friends_list li.cock_graded:before,
 .friends_list li.cock_base:after,
 .friends_list li.cock_sent:after,
 .friends_list li.cock_received:after,
 .friends_list li.cock_waiting_for_grade:after,
+.friends_list li.cock_hidden_now_needs_review:after,
 .friends_list li.cock_graded:after {
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -390,6 +396,7 @@ body {
 .friends_list li.cock_sent:before,
 .friends_list li.cock_received:before,
 .friends_list li.cock_waiting_for_grade:before,
+.friends_list li.cock_hidden_now_needs_review:before,
 .friends_list li.cock_graded:before {
     width: 45%;
     height: 70px;
@@ -399,19 +406,20 @@ body {
     opacity: 0;
     top: 0;
     z-index: 10;
-    background: rgba(66, 189, 65, .9);
+    background: rgba(245, 0, 87, 0.90);
 }
 
 .friends_list li.cock_base:after,
 .friends_list li.cock_received:after,
 .friends_list li.cock_waiting_for_grade:after,
+.friends_list li.cock_hidden_now_needs_review:after,
 .friends_list li.cock_graded:after {
     width: calc(50% - 20px);
     padding-right: 20px;
     text-align: right;
     content: '';
     height: 70px;
-    background: rgba(66, 189, 65, .9) url('/img/DrawCock_icon_V1.png') no-repeat right 5% top 0;
+    background: rgba(245, 0, 87, 0.90) url('/img/DrawCock_icon_V1.png') no-repeat right 5% top 0;
     background-size: 143px 70px;
     position: absolute;
     opacity: 0;
@@ -421,7 +429,8 @@ body {
 }
 
 .friends_list li.cock_sent:before,
-.friends_list li.cock_waiting_for_grade:before{
+.friends_list li.cock_waiting_for_grade:before,
+.friends_list li.cock_hidden_now_needs_review:before {
     width: 100%;
     height: 70px;
     line-height: 70px;
@@ -436,6 +445,14 @@ body {
 .friends_list li.cock_waiting_for_grade:after{
     background: none;
 }
+.friends_list li.cock_hidden_now_needs_review:before {
+    content: '';
+}
+.friends_list li.cock_hidden_now_needs_review:after {
+    content: '';
+    background: rgba(66,189,65) url('/img/ReviewDoodle_icon_V1.png') no-repeat right 5% top 0;
+    background-size: 143px 70px;
+}
 /*.friends_list li.cock_sent:after,
 .friends_list li.cock_waiting_for_grade:after{
     content: '';
@@ -443,7 +460,7 @@ body {
 }*/
 .friends_list li.cock_received:after {
     content: '';
-    background: rgba(66, 189, 65, .9) url('/img/HideCock_icon_V1.png') no-repeat right 5% top 0;
+    background: rgba(245, 0, 87, 0.90) url('/img/HideCock_icon_V1.png') no-repeat right 5% top 0;
     background-size: 143px 70px;
 }
 
