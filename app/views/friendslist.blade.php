@@ -50,37 +50,37 @@
     @foreach ($mygames as $g)
 
         <?php
-        if ($g->game->status == 1 && $g->drawer->id == Auth::id()) :
+        if ($g->status == 1 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_sent';
-            $username = $g->receiver->username;
+            $username = $g->first_player->username;
 
-        elseif ($g->game->status == 2 && $g->drawer->id == Auth::id()) :
+        elseif ($g->status == 2 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_hidden_need_grade';
-            $username = $g->receiver->username;
+            $username = $g->first_player->username;
 
-        elseif ($g->game->status == 3 && $g->drawer->id == Auth::id()) :
+        elseif ($g->status == 3 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_grade_sent_wait_for_new';
-            $username = $g->receiver->username;
+            $username = $g->first_player->username;
 
-        elseif ($g->game->status == 1 && $g->receiver->id == Auth::id()) :
+        elseif ($g->status == 1 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_received';
-            $username = $g->drawer->username;
+            $username = $g->second_player->username;
 
-        elseif ($g->game->status == 2 && $g->receiver->id == Auth::id()) :
+        elseif ($g->status == 2 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_waiting_for_grade';
-            $username = $g->drawer->username;
+            $username = $g->second_player->username;
 
-        elseif ($g->game->status == 3 && $g->receiver->id == Auth::id()) :
+        elseif ($g->status == 3 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_graded';
-            $username = $g->drawer->username;
+            $username = $g->second_player->username;
 
         else :
-            echo $g->game->status;
+            echo $g->status;
             $cock_class = 'cock_base';
         endif;
         ?>
 
-        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->drawer->id }}" data-gameid="{{ $g->game_id }}"><span>{{ $username }}</span></li>
+        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->second_player->id }}" data-gameid="{{ $g->id }}"><span>{{ $username }}</span></li>
     @endforeach
 </ul>
 

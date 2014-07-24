@@ -10,4 +10,14 @@ class Game extends \Eloquent {
 
     protected $table = 'games';
 
+    public function first_player()
+    {
+        return $this->belongsTo('User', 'first_player_id');
+    }
+
+    public function second_player()
+    {
+        return $this->belongsTo('User', 'second_player_id');
+    }
+
 }
