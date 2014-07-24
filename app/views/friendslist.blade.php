@@ -162,6 +162,8 @@ $(function(){
             tap: function(){
                 user_id = $(this).data('userid');
                 sess_id = $(this).data('sessid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
             },
             swipeRight: function(e, dir, dis, dur, fc) {
 
