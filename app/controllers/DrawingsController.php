@@ -1,5 +1,7 @@
 <?php
 
+use CAD\ImageHandler;
+
 class DrawingsController extends \BaseController {
 
 	/**
@@ -15,9 +17,7 @@ class DrawingsController extends \BaseController {
         $receiver   = Input::get('receiver_id');
         $game       = Input::get('game_id');
 
-        $image = str_replace('data:image/png;base64,', '', $image);
-        $image = str_replace(' ', '+', $image);
-        $data = base64_decode( $image );
+        $data = $this->save_base64_image($image);
 
         // If directory doodles doesn't exists, create it
         if (!file_exists('doodles')) mkdir('doodles', 0777);
@@ -55,5 +55,16 @@ class DrawingsController extends \BaseController {
         return View::make('hiding')->with('cockuri', $lastCock['doodle_uri']);
     }
 
+    public function create_hide()
+    {
+        $hiding = Input::get('data_uri');
+        $doodle = Input::get('hidden_doodle_id');
+        $drawer = Auth::id();
+        $receiver = Input::get('receiver_id');
+        $game = Input::get('game_id');
+
+
+
+    }
 
 }

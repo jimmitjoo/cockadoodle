@@ -27,3 +27,4 @@ Route::get('/api/search', 'FriendsController@search');
 Route::get('/api/facebook_auth', 'UsersController@facebook_external');
 Route::get('/api/create_game', 'GamesController@create');
 Route::post('/api/save_drawing', 'DrawingsController@create');
+Route::post('/api/save_hiding', 'DrawingsController@create_hide');

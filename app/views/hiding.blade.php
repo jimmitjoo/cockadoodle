@@ -55,8 +55,6 @@ overflow: hidden !important;
     $('#canvas').on('touchstart', function(e){
         e.preventDefault();
 
-        //$('.background_text').fadeOut();
-
         var fingerX = e.originalEvent.touches[0].pageX - this.offsetLeft;
         var fingerY = e.originalEvent.touches[0].pageY - this.offsetTop;
 
@@ -137,7 +135,7 @@ overflow: hidden !important;
 
         $.ajax({
             type: 'POST',
-            url: 'http://cockadoodle.in/api/save_hideing',
+            url: 'http://cockadoodle.in/api/save_hiding',
             data: {
                 data_uri: image_url,
                 hidden_doodle_id: getUrlVars()["doodle_id"],
