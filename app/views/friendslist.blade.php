@@ -123,6 +123,37 @@ $(function(){
 
         $('.friends_list').trigger('click');
 
+        $('.friends_list .cock_hidden_now_needs_review').swipe({
+            tap: function(){
+                user_id = $(this).data('userid');
+                sess_id = $(this).data('sessid');
+                game_id = $(this).data('gameid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            },
+            swipeRight: function() {
+                var t = $(this);
+                if (t.hasClass('active')) {
+
+                    t.animate({'right': '-100%'}, 250);
+                    t.siblings('li').animate({'left': '-100%'}, 500);
+                    $('.sticky_headline').animate({'top': '-70px'}, 500);
+
+                    user_id = t.data('userid');
+                    sess_id = t.data('sessid');
+
+                    document.location.href = '/gradeboard?game_id=' + game_id;
+
+                    setTimeout(function(){
+                        $('.menu li').css({'z-index': 11});
+                        $('.send').animate({'right':0}, 250);
+                        $('.redo').animate({'left':0}, 250);
+                    }, 550);
+                }
+            }
+        });
+
+
         $('.friends_list .cock_received').swipe({
             tap: function(){
                 user_id = $(this).data('userid');

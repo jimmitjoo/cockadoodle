@@ -6,9 +6,12 @@ class DrawingsController extends \BaseController {
 
     public function grade()
     {
-        $doodle_id = Input::get('doodle_id');
+        $game_id = Input::get('game_id');
 
-        $doodle = Doodle::find($doodle_id);
+        // Get the doodle
+        $doodle = Doodle::where('game_id', '=', $game_id)->orderBy('id', 'desc')->limit(1)->get();
+
+        // Get the hidden cock
         $cock = Doodle::find($doodle->hidden_doodle_id);
 
         return View::make('grading')->withDoodle($doodle)->withCock($cock);
@@ -17,7 +20,8 @@ class DrawingsController extends \BaseController {
     public function create_grade()
     {
 
-        $doodle_id = Input::get('doodle_id');
+        $doodle = Input::get('doodle_id');
+        $game = Game::find($doodle->game_id);
         $judge_id = Auth::id();
         $grade = Input::get('grade');
 
