@@ -49,6 +49,11 @@ background-size: contain;
 
 <script>
 
+    var cock_height,
+        cock_width,
+        doodle_height,
+        doodle_width;
+
     $("#the_cock").load(function() {
         var cock_height = $(this).height();
         var cock_width = $(this).width();
@@ -66,6 +71,23 @@ background-size: contain;
         $(this).remove();
     });
 
+    $(document).ready(function(){
+
+        var win_width = $(window).width();
+        
+        if (cock_width > doodle_width) {
+            var view_scale = win_width / cock_width;
+        } else {
+            var view_scale = win_width / doodle_width;
+        }
+
+        var cw = cock_width * view_scale;
+        var dw = doodle_width * view_scale;
+
+        $('#cock').css({'width': cw + 'px' });
+        $('#doodle').css({'width': dw + 'px' });
+
+    });
 
     $('.send').on('touchstart', function(){
 
