@@ -138,7 +138,7 @@ overflow: hidden !important;
             url: 'http://cockadoodle.in/api/save_hiding',
             data: {
                 data_uri: image_url,
-                hidden_doodle_id: getUrlVars()["doodle_id"],
+                hidden_doodle_id: {{ $cockid }},
                 drawer_id: getUrlVars()["sess_id"],
                 receiver_id: getUrlVars()["user_id"],
                 game_id: getUrlVars()["game_id"]
