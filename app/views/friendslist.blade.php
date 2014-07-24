@@ -52,27 +52,33 @@
         <?php
         if ($g->status == 1 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_sent';
-            $username = $g->first_player->username;
+            $username = $g->second_player->username;
+            $userid = $g->second_player_id;
 
         elseif ($g->status == 2 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_hidden_need_grade';
-            $username = $g->first_player->username;
+            $username = $g->second_player->username;
+            $userid = $g->second_player_id;
 
         elseif ($g->status == 3 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_grade_sent_wait_for_new';
-            $username = $g->first_player->username;
+            $username = $g->second_player->username;
+            $userid = $g->second_player_id;
 
         elseif ($g->status == 1 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_received';
-            $username = $g->second_player->username;
+            $username = $g->first_player->username;
+            $userid = $g->first_player_id;
 
         elseif ($g->status == 2 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_waiting_for_grade';
-            $username = $g->second_player->username;
+            $username = $g->first_player->username;
+            $userid = $g->first_player_id;
 
         elseif ($g->status == 3 && $g->second_player_id == Auth::id()) :
             $cock_class = 'cock_graded';
-            $username = $g->second_player->username;
+            $username = $g->first_player->username;
+            $userid = $g->first_player_id;
 
         else :
             echo $g->status;
@@ -80,7 +86,7 @@
         endif;
         ?>
 
-        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $g->second_player->id }}" data-gameid="{{ $g->id }}"><span>{{ $username }}</span></li>
+        <li class="{{ $cock_class }}" data-sessid="{{ Auth::id() }}" data-userid="{{ $userid }}" data-gameid="{{ $g->id }}"><span>{{ $username }}</span></li>
     @endforeach
 </ul>
 

@@ -38,7 +38,7 @@ class UsersController extends \BaseController {
             !Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])
         ) {
 
-            return 'User has an account, bit the password is not correct';
+            return 'User has an account, but the password is not correct';
 
         } else {
 
