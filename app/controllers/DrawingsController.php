@@ -72,10 +72,12 @@ class DrawingsController extends \BaseController {
         file_put_contents( $doodleName, $data );
 
         $doodle = new Doodle();
-        $game = Game::find($game_id);
-        $game->status = 2;
         $gameRound = new GameRound();
 
+        $game = Game::find($game_id);
+        $game->status = 2;
+        $game->save();
+        
         $doodle->drawer_id = Auth::id();
         $doodle->doodle_uri = $doodleName;
         $doodle->hidden_doodle_id = $hidden_doodle;
