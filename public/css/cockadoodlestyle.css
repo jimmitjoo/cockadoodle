@@ -431,8 +431,7 @@ body {
 }
 
 .friends_list li.cock_sent:before,
-.friends_list li.cock_waiting_for_grade:before,
-.friends_list li.cock_hidden_now_needs_review:before {
+.friends_list li.cock_waiting_for_grade:before {
     width: 100%;
     height: 70px;
     line-height: 70px;
