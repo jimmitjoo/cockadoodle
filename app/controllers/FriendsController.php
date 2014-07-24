@@ -21,7 +21,7 @@ class FriendsController extends \BaseController {
         $query = Input::get('query');
         if (strlen($query) > 1) {
 
-            $users = User::where('username', 'LIKE', '%' . $query . '%')
+            $users = User::where('username', 'LIKE', '%' . $query . '%')->where('id', '!=', Auth::id())
                 //->orWhere('email', 'LIKE', '%' . $query . '%')
                 ->take(5)->get();
 
