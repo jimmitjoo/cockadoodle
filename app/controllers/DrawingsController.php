@@ -9,10 +9,11 @@ class DrawingsController extends \BaseController {
         $game_id = Input::get('game_id');
 
         // Get the doodle
-        $doodle = Doodle::where('game_id', '=', $game_id)->orderBy('id', 'desc')->limit(1)->get();
+        $round = GameRound::where('game_id', '=', $game_id)->orderBy('id', 'desc')->first();
+        $doodle = Doodle::where('id', '=', $round['doodle_id'])->orderBy('id', 'desc')->first();
 
         // Get the hidden cock
-        $cock = Doodle::find($doodle->hidden_doodle_id);
+        $cock = Doodle::find($doodle['hidden_doodle_id']);
 
         return View::make('grading')->withDoodle($doodle)->withCock($cock);
     }
