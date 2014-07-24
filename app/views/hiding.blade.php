@@ -121,12 +121,12 @@ overflow: hidden !important;
         canvas.setAttribute('height', $(document).height());
         canvas.setAttribute('id', 'canvas');
         canvasDiv.appendChild(canvas);
-        if(typeof G_vmlCanvasManager != 'undefined') {
+
+        if (typeof G_vmlCanvasManager != 'undefined') {
             canvas = G_vmlCanvasManager.initElement(canvas);
         }
 
         return canvas;
-
     }
 
     $('.send').on('touchstart', function(){
@@ -137,9 +137,10 @@ overflow: hidden !important;
 
         $.ajax({
             type: 'POST',
-            url: 'http://cockadoodle.in/api/save_drawing',
+            url: 'http://cockadoodle.in/api/save_hideing',
             data: {
                 data_uri: image_url,
+                hidden_doodle_id: getUrlVars()["doodle_id"],
                 drawer_id: getUrlVars()["sess_id"],
                 receiver_id: getUrlVars()["user_id"],
                 game_id: getUrlVars()["game_id"]
@@ -151,7 +152,7 @@ overflow: hidden !important;
         // send doodle, maybe that's done when sending to the game table?
 
         // display message that confirm it is sent
-        $('.doneDiv .text').text('COCK sent to your friend.');
+        $('.doneDiv .text').text('Doodle sent back to your friend.');
 
         setTimeout(function(){
             document.location.href = '/friends';

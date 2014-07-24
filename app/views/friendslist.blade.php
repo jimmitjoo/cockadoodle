@@ -90,7 +90,6 @@
     @endforeach
 </ul>
 
-
 @stop
 
 @section('scripts')
@@ -103,14 +102,13 @@ $(function(){
 
 
     $('.original').on('touchstart', function(e){
-        $that = $('.add_friends');
-        $this = $(this);
+        var that = $('.add_friends');
 
-        if ($that.height() < 250) {
-            $that.animate({height: '280px'}, 250);
+        if (that.height() < 250) {
+            that.animate({height: '280px'}, 250);
             $('.open').show();
         } else {
-            $that.animate({height: '70px'}, 250);
+            that.animate({height: '70px'}, 250);
             setTimeout(function(){
                 $('.open').hide();
             },225);
@@ -210,15 +208,16 @@ $(function(){
 
 
     $('.searchfield').on('focus', function(){
+
         $('.add_friends').animate({height: '140px'}, 300);
         $('.add_friends button').hide();
+
     }).on('focusout', function(){
+
         $('.add_friends').animate({height: '281px'}, 300);
         $('.add_friends button').show();
-    });
 
-
-    $('.searchfield').on('keyup', function(e){
+    }).on('keyup', function(e){
 
         $('.res-item').remove();
         var query = $(this).val();
