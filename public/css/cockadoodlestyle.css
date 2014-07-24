@@ -490,6 +490,7 @@ body {
 .friends_list li.cock_sent.active:after,
 .friends_list li.cock_received.active:after,
 .friends_list li.cock_waiting_for_grade.active:after,
+.friends_list li.cock_hidden_now_needs_review:after,
 .friends_list li.cock_graded.active:after {
     opacity: 1;
 }
