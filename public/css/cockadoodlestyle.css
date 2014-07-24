@@ -354,6 +354,7 @@ body {
 .friends_list li.cock_hidden_now_needs_review {
     background: #42bd41;
     border-top: 1px solid #a4fc9f;
+    color: #eeeeee;
 }
 .friends_list li.cock_graded {
     background: #ff6f00;
@@ -390,6 +391,7 @@ body {
     -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
+    color: #eeeeee;
 }
 
 .friends_list li.cock_base:before,
