@@ -81,6 +81,7 @@ background-size: contain;
         doodle_width = $("#the_doodle").width();
 
         var win_width = $(window).width();
+        var win_height = $(window).height();
 
         if (cock_width > doodle_width) {
             var view_scale = win_width / cock_width;
@@ -93,20 +94,24 @@ background-size: contain;
         var dw = doodle_width * view_scale;
         var dh = doodle_height * view_scale;
 
-        $('#cock').css({
-            'width': cw + 'px',
-            'height': ch + 'px',
-            'margin-top': '-' + (ch/2) + 'px',
-            'margin-left': '-' + (cw/2) + 'px'
-        });
-        $('#doodle').css({
-            'width': dw + 'px',
-            'height': dh + 'px',
-            'margin-top': '-' + (dh/2) + 'px',
-            'margin-left': '-' + (dw/2) + 'px'
-        });
+        setTimeout(function(){
+            $('#cock').css({
+                'width': cw + 'px',
+                'height': ch + 'px',
+                'margin-top': '-' + (ch/2) + 'px',
+                'margin-left': '-' + (cw/2) + 'px'
+            });
+            $('#doodle').css({
+                'width': dw + 'px',
+                'height': dh + 'px',
+                'margin-top': '-' + (dh/2) + 'px',
+                'margin-left': '-' + (dw/2) + 'px'
+            });
+        }, 300);
 
-        $('#the_cock, #the_doodle').remove();
+        setTimeout(function(){
+            $('#the_cock, #the_doodle').remove();
+        }, 300);
 
     });
 
