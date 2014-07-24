@@ -18,6 +18,7 @@ Route::get(
     ])->before('auth');
 Route::get('/drawingboard', 'DrawingsController@draw');
 Route::get('/hidingboard', 'DrawingsController@hide');
+Route::get('/gradeboard', 'DrawingsController@grade');
 
 // Search friends
 Route::get('/api/search', 'FriendsController@search');
@@ -28,3 +29,4 @@ Route::get('/api/facebook_auth', 'UsersController@facebook_external');
 Route::get('/api/create_game', 'GamesController@create');
 Route::post('/api/save_drawing', 'DrawingsController@create');
 Route::post('/api/save_hiding', 'DrawingsController@create_hide');
+Route::post('/api/grade_doodle', 'DrawingsController@create_grade');

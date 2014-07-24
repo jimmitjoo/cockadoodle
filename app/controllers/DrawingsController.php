@@ -4,6 +4,27 @@ use CAD\ImageHandler;
 
 class DrawingsController extends \BaseController {
 
+    public function grade()
+    {
+        $doodle_id = Input::get('doodle_id');
+
+        $doodle = Doodle::find($doodle_id);
+        $cock = Doodle::find($doodle->hidden_doodle_id);
+
+        return View::make('grading')->withDoodle($doodle)->withCock($cock);
+    }
+
+    public function create_grade()
+    {
+
+        $doodle_id = Input::get('doodle_id');
+        $judge_id = Auth::id();
+        $grade = Input::get('grade');
+
+        // Save grade as new post to the database
+
+    }
+
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /drawings/create
@@ -12,7 +33,6 @@ class DrawingsController extends \BaseController {
 	 */
 	public function create()
 	{
-
         $image      = Input::get('data_uri');
         $receiver   = Input::get('receiver_id');
         $game       = Input::get('game_id');
