@@ -16,9 +16,11 @@ position: fixed;
 top: 0;
 left: 0;
 background: url('/{{$cock->doodle_uri}}') no-repeat center center;
+background-size: contain;
 }
 #doodle {
 background: url('/{{$doodle->doodle_uri}}') no-repeat center center;
+background-size: contain;
 }
 @stop
 
