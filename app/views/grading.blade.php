@@ -13,8 +13,8 @@ overflow: hidden !important;
 width: 100%;
 height: 100%;
 position: fixed;
-top: 0;
-left: 0;
+top: 50%;
+left: 50%;
 background: url('/{{$cock->doodle_uri}}') no-repeat center center;
 background-size: contain;
 }
@@ -78,10 +78,22 @@ background-size: contain;
         }
 
         var cw = cock_width * view_scale;
+        var ch = cock_height * view_scale;
         var dw = doodle_width * view_scale;
+        var dh = doodle_height * view_scale;
 
-        $('#cock').css({'width': cw + 'px' });
-        $('#doodle').css({'width': dw + 'px' });
+        $('#cock').css({
+            'width': cw + 'px',
+            'height': ch + 'px',
+            'top': '-' + (cw/2) + 'px',
+            'left': '-' + (ch/2) + 'px'
+        });
+        $('#doodle').css({
+            'width': dw + 'px',
+            'height': dh + 'px',
+            'top': '-' + (dw/2) + 'px',
+            'left': '-' + (dh/2) + 'px'
+        });
 
         $('#the_cock, #the_doodle').remove();
 
