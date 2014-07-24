@@ -48,7 +48,7 @@ background-size: contain;
 <script src="/js/jquery.js"></script>
 
 <script>
-
+/*
     var cock_height,
         cock_width,
         doodle_height,
@@ -66,8 +66,19 @@ background-size: contain;
 
         alert('doodle_height: ' + doodle_height + ' ::: doodle_width: ' + doodle_width);
     });
+    */
 
     $(document).ready(function(){
+
+        var cock_height,
+            cock_width,
+            doodle_height,
+            doodle_width;
+
+        cock_height = $("#the_cock").height();
+        cock_width = $("#the_cock").width();
+        doodle_height = $("#the_doodle").height();
+        doodle_width = $("#the_doodle").width();
 
         var win_width = $(window).width();
 
@@ -85,14 +96,14 @@ background-size: contain;
         $('#cock').css({
             'width': cw + 'px',
             'height': ch + 'px',
-            'top': '-' + (cw/2) + 'px',
-            'left': '-' + (ch/2) + 'px'
+            'margin-top': '-' + (cw/2) + 'px',
+            'margin-left': '-' + (ch/2) + 'px'
         });
         $('#doodle').css({
             'width': dw + 'px',
             'height': dh + 'px',
-            'top': '-' + (dw/2) + 'px',
-            'left': '-' + (dh/2) + 'px'
+            'margin-top': '-' + (dw/2) + 'px',
+            'margin-left': '-' + (dh/2) + 'px'
         });
 
         $('#the_cock, #the_doodle').remove();
