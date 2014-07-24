@@ -77,7 +77,7 @@ class DrawingsController extends \BaseController {
         $game = Game::find($game_id);
         $game->status = 2;
         $game->save();
-        
+
         $doodle->drawer_id = Auth::id();
         $doodle->doodle_uri = $doodleName;
         $doodle->hidden_doodle_id = $hidden_doodle;
