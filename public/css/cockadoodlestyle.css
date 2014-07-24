@@ -434,7 +434,7 @@ body {
     content: 'Cock hidden';
 }
 .friends_list li.cock_waiting_for_grade:after{
-    content: '';
+    background: none;
 }
 /*.friends_list li.cock_sent:after,
 .friends_list li.cock_waiting_for_grade:after{
