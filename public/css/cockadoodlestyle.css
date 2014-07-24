@@ -260,7 +260,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #ffffff;
 }
 ::-webkit-input-placeholder {
     color: #999999;
@@ -297,7 +297,7 @@ body {
     font-size: 35px;
     float: left;
     background: #cccccc;
-    color: #eeeeee;
+    color: #ffffff;
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -305,11 +305,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     z-index: 0;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #ffffff;
 }
 .friends_list li.add_friends .open button.facebook {
     background: #3b5998;
-    color: #eeeeee;
+    color: #ffffff;
     border-top: 1px solid #c3ceea;
     -moz-box-shadow:    inset 0 -2px 3px rgba(0,0,0,.1);
     -webkit-box-shadow: inset 0 -2px 3px rgba(0,0,0,.1);
@@ -343,7 +343,7 @@ body {
 }
 .friends_list li.cock_received {
     background: #ffecb3;
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid #ffffff;
     position: relative;
 }
 .friends_list li.cock_waiting_for_grade {
@@ -354,7 +354,7 @@ body {
 .friends_list li.cock_hidden_now_needs_review {
     background: #42bd41;
     border-top: 1px solid #a4fc9f;
-    color: #eeeeee;
+    color: #ffffff;
 }
 .friends_list li.cock_graded {
     background: #ff6f00;
@@ -369,7 +369,7 @@ body {
 .friends_list li.cock_sent span,
 .friends_list li.cock_graded span,
 .friends_list li.cock_hidden_now_needs_review span {
-    color: #eeeeee;
+    color: #ffffff;
 }
 .friends_list li.cock_received span,
 .friends_list li.cock_waiting_for_grade span {
@@ -435,6 +435,7 @@ body {
     width: 100%;
     height: 70px;
     line-height: 70px;
+    color: #ffffff;
     content: 'Cock sent';
     padding: 0;
     text-align: center;
