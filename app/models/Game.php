@@ -20,4 +20,9 @@ class Game extends \Eloquent {
         return $this->belongsTo('User', 'second_player_id');
     }
 
+    public function game_rounds()
+    {
+        return $this->hasMany('GameRound');
+    }
+
 }
