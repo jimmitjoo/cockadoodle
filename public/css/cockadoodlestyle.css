@@ -451,7 +451,7 @@ body {
 }
 .friends_list li.cock_hidden_now_needs_review:after {
     content: '';
-    background: rgba(245, 0, 87, 0.90) url('/img/ReviewDoodle_icon_V1.png') no-repeat right 5% top 0;
+    background: rgba(245, 0, 87, 0.90) url('/img/ReviewDoodle_icon_V1.png') no-repeat center center;
     background-size: contain;
 }
 /*.friends_list li.cock_sent:after,
