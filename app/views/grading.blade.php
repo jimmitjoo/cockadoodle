@@ -96,14 +96,14 @@ background-size: contain;
         $('#cock').css({
             'width': cw + 'px',
             'height': ch + 'px',
-            'margin-top': '-' + (cw/2) + 'px',
-            'margin-left': '-' + (ch/2) + 'px'
+            'margin-top': '-' + (ch/2) + 'px',
+            'margin-left': '-' + (cw/2) + 'px'
         });
         $('#doodle').css({
             'width': dw + 'px',
             'height': dh + 'px',
-            'margin-top': '-' + (dw/2) + 'px',
-            'margin-left': '-' + (dh/2) + 'px'
+            'margin-top': '-' + (dh/2) + 'px',
+            'margin-left': '-' + (dw/2) + 'px'
         });
 
         $('#the_cock, #the_doodle').remove();
