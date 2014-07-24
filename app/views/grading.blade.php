@@ -55,26 +55,22 @@ background-size: contain;
         doodle_width;
 
     $("#the_cock").load(function() {
-        var cock_height = $(this).height();
-        var cock_width = $(this).width();
+        cock_height = $("#the_cock").height();
+        cock_width = $("#the_cock").width();
 
         alert('cock_height: ' + cock_height + ' ::: cock_width: ' + cock_width);
-
-        $(this).remove();
     });
     $("#the_doodle").load(function() {
-        var doodle_height = $(this).height();
-        var doodle_width = $(this).width();
+        doodle_height = $("#the_doodle").height();
+        doodle_width = $("#the_doodle").width();
 
         alert('doodle_height: ' + doodle_height + ' ::: doodle_width: ' + doodle_width);
-
-        $(this).remove();
     });
 
     $(document).ready(function(){
 
         var win_width = $(window).width();
-        
+
         if (cock_width > doodle_width) {
             var view_scale = win_width / cock_width;
         } else {
@@ -86,6 +82,8 @@ background-size: contain;
 
         $('#cock').css({'width': cw + 'px' });
         $('#doodle').css({'width': dw + 'px' });
+
+        $('#the_cock, #the_doodle').remove();
 
     });
 
