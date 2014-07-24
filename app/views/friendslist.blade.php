@@ -7,7 +7,6 @@
 
 @section('content')
 
-<div class="background_text">Draw<br/>Cock <br/>Here</div>
 
 <div class="sticky_headline">
     Username
