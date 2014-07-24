@@ -471,6 +471,7 @@ body {
 .friends_list li.cock_sent.active span,
 .friends_list li.cock_received.active span,
 .friends_list li.cock_waiting_for_grade.active span,
+.friends_list li.cock_hidden_now_needs_review span,
 .friends_list li.cock_graded.active span {
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -483,6 +484,7 @@ body {
 .friends_list li.cock_sent.active:before,
 .friends_list li.cock_received.active:before,
 .friends_list li.cock_waiting_for_grade.active:before,
+.friends_list li.cock_hidden_now_needs_review.active:before,
 .friends_list li.cock_graded.active:before {
     opacity: 1;
 }
@@ -490,7 +492,7 @@ body {
 .friends_list li.cock_sent.active:after,
 .friends_list li.cock_received.active:after,
 .friends_list li.cock_waiting_for_grade.active:after,
-.friends_list li.cock_hidden_now_needs_review:after,
+.friends_list li.cock_hidden_now_needs_review.active:after,
 .friends_list li.cock_graded.active:after {
     opacity: 1;
 }
