@@ -26,6 +26,9 @@ background-size: contain;
 
 @section('content')
 
+<img id="the_cock" src="/{{$cock->doodle_uri}}" alt=""/>
+<img id="the_doodle" src="/{{$doodle->doodle_uri}}" alt=""/>
+
 <div id="cock"></div>
 <div id="doodle"></div>
 
@@ -45,6 +48,23 @@ background-size: contain;
 <script src="/js/jquery.js"></script>
 
 <script>
+
+    $("#the_cock").load(function() {
+        var cock_height = $(this).height();
+        var cock_width = $(this).width();
+
+        alert('cock_height: ' + cock_height + ' ::: cock_width: ' + cock_width);
+
+        $(this).remove();
+    });
+    $("#the_doodle").load(function() {
+        var doodle_height = $(this).height();
+        var doodle_width = $(this).width();
+
+        alert('doodle_height: ' + doodle_height + ' ::: doodle_width: ' + doodle_width);
+
+        $(this).remove();
+    });
 
 
     $('.send').on('touchstart', function(){
