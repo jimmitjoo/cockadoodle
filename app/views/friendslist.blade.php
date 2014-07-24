@@ -154,12 +154,15 @@ $(function(){
             }
         })
 
+        $('.friends_list [class^="cock_"]').on('touchstart', function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+
         $('.friends_list .cock_base, .res-item').swipe({
             tap: function(){
                 user_id = $(this).data('userid');
                 sess_id = $(this).data('sessid');
-                $(this).siblings().removeClass('active');
-                $(this).addClass('active');
             },
             swipeRight: function(e, dir, dis, dur, fc) {
 
