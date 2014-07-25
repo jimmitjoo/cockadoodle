@@ -30,3 +30,4 @@ Route::get('/api/create_game', 'GamesController@create');
 Route::post('/api/save_drawing', 'DrawingsController@create');
 Route::post('/api/save_hiding', 'DrawingsController@create_hide');
 Route::post('/api/grade_doodle', 'DrawingsController@create_grade');
+Route::get('/api/get_review', 'DrawingsController@get_review');

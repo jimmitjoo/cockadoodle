@@ -153,6 +153,51 @@ $(function(){
             }
         });
 
+        $('.friends_list .cock_graded').swipe({
+            tap: function(){
+                user_id = $(this).data('userid');
+                sess_id = $(this).data('sessid');
+                game_id = $(this).data('gameid');
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            },
+            swipeRight: function() {
+
+                $.ajax({
+
+                    type: 'GET',
+                    url: 'http://cockadoodle.in/api/get_review',
+                    data: {game_id: game_id},
+                    cache: false,
+                    dataType: 'html'
+
+                }).success(function(data){
+
+                    var gradeName = [
+                        0: 'Lifeless',
+                        10: 'Flaccid',
+                        20: 'Floppy',
+                        30: 'Limp',
+                        40: 'Embarrasing',
+                        50: 'Semi',
+                        60: 'Semi hard',
+                        70: 'Solid effort',
+                        80: 'Stiffy',
+                        90: 'Hard-on',
+                        100: 'Rager!!'
+                    ];
+
+                    $('.doneDiv .text').html(
+                        '<h2>Doodle Review!</h2>' +
+                        '<img src="/img/review_icons/Cock_' + data.grade + '.png" /><br />' +
+                        data.grade + '/100<br />' +
+                        gradeName[data.grade]
+                    );
+
+                });
+
+            }
+        });
 
         $('.friends_list .cock_received').swipe({
             tap: function(){

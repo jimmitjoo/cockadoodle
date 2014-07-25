@@ -37,6 +37,15 @@ class DrawingsController extends \BaseController {
 
     }
 
+
+    public function get_review()
+    {
+        $doodleGame = GameRound::where('game_id', '=', Input::get('game_id'))->orderBy('id', 'desc')->first();
+        $doodleGrade = Grade::where('doodle_id', '=', $doodleGame['doodle_id'])->first();
+
+        return Response::json($doodleGrade);
+    }
+
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /drawings/create
