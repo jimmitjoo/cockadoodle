@@ -576,6 +576,22 @@ body {
     background: transparent;
 }
 
+
+.doneDiv {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+}
+.doneDiv .text {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
 #reviewSlider {
     width: 90%;
     position: fixed !important;
