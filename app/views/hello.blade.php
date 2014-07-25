@@ -16,13 +16,17 @@
     background: url('/img/Intro_BG_layer01.png') no-repeat center center;
     background-size: contain;
     opacity: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 .lightweight_logo img {
     max-width: 100%;
     opacity: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1111;
 }
 @stop
