@@ -105,6 +105,7 @@
         $('.login_to_account, .create_account').on('touchstart', function(){
             $('.sign_in').toggle();
             $('.sign_up').toggle();
+            return false;
         });
 
         setTimeout(function(){
