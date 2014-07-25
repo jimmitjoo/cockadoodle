@@ -89,12 +89,15 @@ body {
 .facebook_box,
 .email_box {
     width: 100%;
-    height: 42%;
     float: left;
     position: relative;
 }
 .facebook_box {
+    height: 36%;
     background: #e2f4ff;
+}
+.email_box {
+    height: 48%;
 }
 .facebook_logo {
     width: 86px;
