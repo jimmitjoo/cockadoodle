@@ -39,7 +39,7 @@
     @foreach ($mygames as $g)
 
         <?php
-        if ($g->status == 4) {
+        if ($g->status == 4 || count($g->game_rounds) < 1) {
             continue;
         }
 
