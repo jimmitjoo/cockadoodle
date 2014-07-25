@@ -584,6 +584,7 @@ body {
 }
 .noUi-target {
     border-color: #eeeeee !important;
+    border-radius: 0 !important;
 }
 .noUi-background {
     background: #ffc107 !important;
@@ -595,6 +596,7 @@ body {
 .noUi-handle {
     background: #ff6f00 !important;
     box-shadow: none !important;
+    border-radius: 0 !important;
 }
 .noUi-handle:before, .noUi-handle:after {
     display: none !important;
