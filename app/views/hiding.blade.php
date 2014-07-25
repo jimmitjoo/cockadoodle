@@ -156,6 +156,8 @@ overflow: hidden !important;
             document.location.href = '/friends';
         },4000);
 
+        $('.doneDiv .text').css({'top': '75px'});
+
         $('.doneDiv').animate({'top': '0'}, 300);
         canvas.remove();
     });
