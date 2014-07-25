@@ -151,7 +151,7 @@ width: 100%;
 
     $("#reviewSlider").noUiSlider({
         start: [ 0 ],
-        step: [ 10 ],
+        step: 10,
         range: {
             'min': [ 0 ],
             'max': [ 100 ]
