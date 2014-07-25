@@ -20,6 +20,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    float: left;
 }
 .lightweight_logo img {
     max-width: 100%;
@@ -28,6 +29,8 @@
     top: 0;
     left: 0;
     z-index: 1111;
+    float:left;
+    display:block;
 }
 @stop
 
@@ -87,6 +90,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+        alert('aslkfjapslödklasödk');
+
         $('.logo').remove();
 
         $('.lightweight_logo').animate({'opacity': '1'}, 500);

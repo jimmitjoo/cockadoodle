@@ -53,6 +53,7 @@ body {
     display: block;
     float: left;
 }
+.lightweight
 
 [class^="arrow-"] {
     position: absolute;
