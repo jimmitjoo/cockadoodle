@@ -65,10 +65,20 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 
+    var setLoginHeight = function(){
+        var lb_h = $('.login_box').height();
+        $('.login_box').css({'line-height': lb_h + 'px'});
+    }
+
+    $(window).on('resize', function(){
+        setLoginHeight();
+    });
+
     $(function() {
 
         $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
+        setLoginHeight();
 
         $('.login_to_account, .create_account').on('click touchstart', function(){
             $('.sign_in').toggle();
