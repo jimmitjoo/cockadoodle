@@ -9,7 +9,7 @@
 
 
 <div class="sticky_headline">
-    Username
+    {{ Auth::user()->username }}
 </div>
 
 <div id="canvasDiv"></div>
