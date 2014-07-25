@@ -152,6 +152,7 @@ width: 100%;
         return vars;
     }
 
+
     $("#reviewSlider").noUiSlider({
         start: [ 50 ],
         step: 10,
@@ -162,8 +163,8 @@ width: 100%;
     });
 
     $('#reviewSlider').on('slide', function(){
-        var sVal = $(this).val();
-        $('.redo').text(sVal);
+        var sVal = Math.round($(this).val());
+        $('.redo').text( sVal );
     });
 
 </script>
