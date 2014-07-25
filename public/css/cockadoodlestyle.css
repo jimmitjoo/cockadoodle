@@ -610,6 +610,7 @@ body {
     font-size: 35px;
     text-transform: uppercase;
     float: left;
+    display: block;
 }
 .doneDiv .text img {
     max-width: 100% !important;
