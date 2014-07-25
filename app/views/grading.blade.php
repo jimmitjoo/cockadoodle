@@ -41,7 +41,7 @@ width: 100%;
 
 <ul class="menu">
     <li class="redo">50</li>
-    <li class="send">Send review</li>
+    <li class="send">Send</li>
 </ul>
 
 <div class="doneDiv">

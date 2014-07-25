@@ -91,9 +91,12 @@
 <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-        alert('aslkfjapslödklasödk');
+        $('.logo, video').remove();
 
-        $('.logo').remove();
+        $('.lightweight_logo').css({
+            'width': $(window).width()  + 'px',
+            'height': $(window).height() + 'px'
+        });
 
         $('.lightweight_logo').animate({'opacity': '1'}, 500);
 

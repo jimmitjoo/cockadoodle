@@ -23,7 +23,7 @@
     <span class="text"></span>
     <ul class="menu">
         <li class="back">Back</li>
-        <li class="draw">Draw cock</li>
+        <li class="draw">New</li>
     </ul>
 </div>
 
