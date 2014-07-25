@@ -611,6 +611,9 @@ body {
     text-transform: uppercase;
     float: left;
 }
+.doneDiv .text img {
+    max-width: 100% !important;
+}
 
 
 #reviewSlider {
