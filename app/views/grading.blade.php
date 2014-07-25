@@ -136,7 +136,10 @@ width: 100%;
             document.location.href = '/friends';
         },4000);
 
+        $('.doneDiv .text').css({'top': '85px'});
+
         $('.doneDiv').animate({'top': '0'}, 300);
+
     });
 
     var doodle = $('#doodle');

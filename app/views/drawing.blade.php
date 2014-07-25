@@ -142,11 +142,13 @@ html, body {
         // send doodle, maybe that's done when sending to the game table?
 
         // display message that confirm it is sent
-        $('.doneDiv .text').text('COCK sent to your friend.');
+        $('.doneDiv .text').text('Cock sent to friend');
 
         setTimeout(function(){
             document.location.href = '/friends';
         },4000);
+
+        $('.doneDiv .text').css({'top': '85px'});
 
         $('.doneDiv').animate({'top': '0'}, 300);
         canvas.remove();
