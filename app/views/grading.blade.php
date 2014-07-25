@@ -40,6 +40,7 @@ width: 100%;
 <div id="reviewSlider"></div>
 
 <ul class="menu">
+    <li class="redo"></li>
     <li class="send">Send review</li>
 </ul>
 
@@ -69,28 +70,30 @@ width: 100%;
         doodle_height = $("#the_doodle").height();
         doodle_width = $("#the_doodle").width();
 
-        alert(
+        /*alert(
             'cock height:' + cock_height + ' :::' +
             'cock width:' + cock_width + ' :::' +
             'doodle height:' + doodle_height + ' :::' +
             'doodle width:' + doodle_width
-        );
-
-        var win_width = $(window).width();
-        var win_height = $(window).height();
-
-        if (cock_width > doodle_width) {
-            var view_scale = win_width / cock_width;
-        } else {
-            var view_scale = win_width / doodle_width;
-        }
-
-        var cw = cock_width * view_scale;
-        var ch = cock_height * view_scale;
-        var dw = doodle_width * view_scale;
-        var dh = doodle_height * view_scale;
+        );*/
 
         setTimeout(function(){
+
+            var win_width = $(window).width();
+            var win_height = $(window).height();
+
+            if (cock_width > doodle_width) {
+                var view_scale = win_width / cock_width;
+            } else {
+                var view_scale = win_width / doodle_width;
+            }
+
+            var cw = cock_width * view_scale;
+            var ch = cock_height * view_scale;
+            var dw = doodle_width * view_scale;
+            var dh = doodle_height * view_scale;
+
+
             $('#cock').css({
                 'width': cw + 'px',
                 'height': ch + 'px',
@@ -103,11 +106,11 @@ width: 100%;
                 'margin-top': '-' + (dh/2) + 'px',
                 'margin-left': '-' + (dw/2) + 'px'
             });
-        }, 300);
+        }, 500);
 
         setTimeout(function(){
             $('#the_cock, #the_doodle').remove();
-        }, 300);
+        }, 500);
 
     });
 
@@ -150,12 +153,17 @@ width: 100%;
     }
 
     $("#reviewSlider").noUiSlider({
-        start: [ 0 ],
+        start: [ 50 ],
         step: 10,
         range: {
             'min': [ 0 ],
             'max': [ 100 ]
         }
+    });
+
+    $('#reviewSlider').on('change', function(){
+        var sVal = $(this).val();
+        $('.redo').text(sVal);
     });
 
 </script>
