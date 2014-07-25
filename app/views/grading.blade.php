@@ -139,14 +139,22 @@ width: 100%;
         $('.doneDiv').slideDown();
     });
 
-    $('#doodle').on('click', function(){
+    var doodle = $('#doodle');
+
+    doodle.on('touchstart', function(){
+        doodle.css({'opacity': '.1'});
+    }).on('touchend', function(){
+        doodle.css({'opacity': '1'});
+    });
+
+    /*$('#doodle').on('click', function(){
         var doodle = $(this);
         if (doodle.css('opacity') < '1') {
             doodle.css({'opacity': '1'});
         } else {
             doodle.css({'opacity': '.1'});
         }
-    });
+    });*/
 
     $('.send').animate({'right':0}, 250);
     $('.redo').animate({'left':0}, 250);
