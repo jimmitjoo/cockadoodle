@@ -31,7 +31,7 @@ class GamesController extends \BaseController {
 
         if ($game = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first()) {
 
-            if ($game->status != 3) return false;
+            if ($game->status != 4) return false;
 
             $game->first_player_id = $current_user;
             $game->second_player_id = $other_user;
@@ -42,7 +42,7 @@ class GamesController extends \BaseController {
 
         } elseif ($game = Game::where('first_player_id', '=', $current_user)->where('second_player_id', '=', $other_user)->first()) {
 
-            if ($game->status != 3) return false;
+            if ($game->status != 4) return false;
 
             $game->first_player_id = $other_user;
             $game->second_player_id = $current_user;
