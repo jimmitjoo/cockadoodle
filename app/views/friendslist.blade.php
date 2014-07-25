@@ -299,13 +299,7 @@ $(function(){
         $('.add_friends').animate({height: '140px'}, 300);
         $('.add_friends button').hide();
 
-    })/*.on('focusout', function(){
-
-        $('.add_friends').animate({height: '281px'}, 300);
-        $('.add_friends button').show();
-
-    })*/
-        .on('keyup', function(e){
+    }).on('keyup', function(e){
 
         $('.res-item').remove();
         var query = $(this).val();
