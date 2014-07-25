@@ -58,8 +58,8 @@ body {
     display:block;
     width:100%;
     height: 100%;
-    background: #000, url('/img/Intro_Combined.png') no-repeat center center;
-    background-size: contain;
+    background: url('/img/Intro_Combined.png') no-repeat center center;
+    background-size: cover;
     opacity: 0;
     position: absolute;
     top: 0;
