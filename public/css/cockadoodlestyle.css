@@ -479,7 +479,8 @@ body {
 .friends_list li.cock_received.active span,
 .friends_list li.cock_waiting_for_grade.active span,
 .friends_list li.cock_hidden_now_needs_review span,
-.friends_list li.cock_graded.active span {
+.friends_list li.cock_graded.active span,
+.friends_list li.cock_grade_sent_wait_for_new.active span {
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
@@ -492,7 +493,8 @@ body {
 .friends_list li.cock_received.active:before,
 .friends_list li.cock_waiting_for_grade.active:before,
 .friends_list li.cock_hidden_now_needs_review.active:before,
-.friends_list li.cock_graded.active:before {
+.friends_list li.cock_graded.active:before,
+.friends_list li.cock_grade_sent_wait_for_new.active:before {
     opacity: 1;
 }
 .friends_list li.cock_base.active:after,
