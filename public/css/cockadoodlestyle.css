@@ -623,12 +623,14 @@ body {
     color: #ffffff;
 }
 .doneDiv .text small {
+    width: 100%;
+    display: block;
     position: absolute;
     bottom: 0;
 }
 .doneDiv .text img {
     max-width: 100% !important;
-    margin-top: 90px;
+    margin-top: 40px;
     display: block;
     float: left;
     position: absolute;
