@@ -616,18 +616,23 @@ body {
 .doneDiv .text h2 {
     margin: 0;
     font-size: 40px;
+    position: absolute;
+    top: 0;
 }
 .doneDiv .text * {
     color: #ffffff;
 }
+.doneDiv .text small {
+    position: absolute;
+    bottom: 0;
+}
 .doneDiv .text img {
-    max-width: 60% !important;
-    margin-left: 20% !important;
+    max-width: 100% !important;
+    margin-top: 90px;
     display: block;
     float: left;
-    zoom: 1%;
-    position: relative;
-    left: 30%;
+    position: absolute;
+    opacity: .1;
 }
 
 
