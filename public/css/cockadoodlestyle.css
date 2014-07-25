@@ -401,7 +401,8 @@ body {
 .friends_list li.cock_received:before,
 .friends_list li.cock_waiting_for_grade:before,
 .friends_list li.cock_hidden_now_needs_review:before,
-.friends_list li.cock_graded:before {
+.friends_list li.cock_graded:before,
+.friends_list li.cock_grade_sent_wait_for_new:before {
     width: 45%;
     height: 70px;
     padding-left: 5%;
@@ -433,7 +434,8 @@ body {
 }
 
 .friends_list li.cock_sent:before,
-.friends_list li.cock_waiting_for_grade:before {
+.friends_list li.cock_waiting_for_grade:before,
+.friends_list li.cock_grade_sent_wait_for_new:before {
     width: 100%;
     height: 70px;
     line-height: 70px;
