@@ -198,6 +198,10 @@ $(function(){
                         gradeName[data.grade] + '</small>'
                     );
 
+                    setTimeout(function(){
+                        $('.doneDiv .text img').animate({'zoom': '100%'});
+                    }, 350);
+
                 });
 
             }
