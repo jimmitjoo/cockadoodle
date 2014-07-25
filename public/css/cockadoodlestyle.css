@@ -575,9 +575,10 @@ body {
     z-index: 0;
     background: transparent;
 }
-.slider {
+
+#reviewSlider {
+    width: 90%;
     position: fixed !important;
     bottom: 70px;
-    left: 50%;
-    margin-left: -150px !important;
+    left: 5%;
 }
