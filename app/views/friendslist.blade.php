@@ -32,23 +32,9 @@
         <span class="original">Friends..</span>
         <div class="open">
             <input class="searchfield" placeholder="search" type="text"/>
-            <!--<button>
-                Contacts
-                        <span class="box">
-                            <span class="fa fa-user"></span>
-                        </span>
-            </button>
-            <button class="facebook">
-                Friends
-                        <span class="box">
-                            <span class="fa fa-facebook"></span>
-                        </span>
-            </button>-->
         </div>
-
     </li>
     <li class="results" style="display: none"></li>
-    <li class="play_random"><span>Random..</span></li>
 
     @foreach ($mygames as $g)
 
