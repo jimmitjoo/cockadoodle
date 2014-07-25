@@ -97,8 +97,8 @@ $(function(){
     $('.original').on('touchstart', function(e){
         var that = $('.add_friends');
 
-        if (that.height() < 250) {
-            that.animate({height: '280px'}, 250);
+        if (that.height() < 120) {
+            that.animate({height: '140px'}, 250);
             $('.open').show();
         } else {
             that.animate({height: '70px'}, 250);
