@@ -21,6 +21,10 @@
 
 <div class="doneDiv">
     <span class="text"></span>
+    <ul class="menu">
+        <li class="back">Back</li>
+        <li class="draw">Draw cock</li>
+    </ul>
 </div>
 
 <ul class="friends_list">
