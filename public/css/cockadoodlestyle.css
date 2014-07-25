@@ -169,11 +169,11 @@ body {
 
 
 .sticky_headline {
-    background: #ffc109;
+    background: #03a9f4;
     color: white;
     height: 50px;
     line-height: 50px;
-    border-top: 20px solid rgba(255,111,4,1);
+    border-top: 13px solid rgba(255,193,9,1);
     font-size: 35px;
     width: 100%;
     position: fixed;
@@ -192,7 +192,7 @@ body {
     list-style: none;
     float: left;
     display: block;
-    padding: 52px 0 0 0;
+    padding: 45px 0 0 0;
     position: relative;
     z-index: 1;
 }
@@ -649,10 +649,10 @@ body {
     float: left;
 }
 .doneDiv .menu li.back {
-    background: #42bd41;
+    background: #ffc107;
 }
 .doneDiv .menu li.draw {
-    background: #ffc107;
+    background: #42bd41;
 }
 
 
