@@ -43,6 +43,10 @@ class DrawingsController extends \BaseController {
         $doodleGame = GameRound::where('game_id', '=', Input::get('game_id'))->orderBy('id', 'desc')->first();
         $doodleGrade = Grade::where('doodle_id', '=', $doodleGame['doodle_id'])->first();
 
+        $game = Game::find(Input::get('game_id'));
+        $game->status = 4;
+        $game->save();
+
         return Response::json($doodleGrade);
     }
 
