@@ -462,6 +462,11 @@ body {
 .friends_list li.cock_grade_sent_wait_for_new:before {
     content: 'Review sent';
 }
+.friends_list li.cock_graded:after {
+    content: '';
+    background: rgba(245, 0, 87, 0.90) url('/img/CheckScore_icon_V1.png') no-repeat center center;
+    background-size: contain;
+}
 /*.friends_list li.cock_sent:after,
 .friends_list li.cock_waiting_for_grade:after{
     content: '';
