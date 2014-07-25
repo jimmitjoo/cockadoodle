@@ -77,6 +77,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $('.logo').remove();
+        
         $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
         setTimeout(function(){
