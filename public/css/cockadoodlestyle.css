@@ -648,6 +648,12 @@ body {
     width: 50%;
     float: left;
 }
+.doneDiv .menu li.back {
+    background: #ffc107;
+}
+.doneDiv .menu li.draw {
+    background: #42bd41;
+}
 
 
 #reviewSlider {
