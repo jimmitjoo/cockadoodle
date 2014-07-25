@@ -92,13 +92,16 @@
 
     $(function() {
 
+        var winwidth = $(document).width();
+        var winheight = $(document).width();
+
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
             $('.logo, video').remove();
 
             $('.lightweight_logo').css({
-                'width': $(window).width()  + 'px',
-                'height': $(window).height() + 'px'
+                'width': winwidth  + 'px',
+                'height': winheight + 'px'
             });
 
             $('.lightweight_logo').animate({'opacity': '1'}, 500);
