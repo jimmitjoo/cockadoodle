@@ -89,26 +89,29 @@
 @section('scripts')
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-        $('.logo, video').remove();
-
-        $('.lightweight_logo').css({
-            'width': $(window).width()  + 'px',
-            'height': $(window).height() + 'px'
-        });
-
-        $('.lightweight_logo').animate({'opacity': '1'}, 500);
-
-        setTimeout(function(){
-            $('.lightweight_logo img').animate({'opacity': '1'}, 1500);
-        }, 400);
-
-    } else {
-        $('.logo').show();
-    }
 
     $(function() {
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+            $('.logo, video').remove();
+
+            $('.lightweight_logo').css({
+                'width': $(window).width()  + 'px',
+                'height': $(window).height() + 'px'
+            });
+
+            $('.lightweight_logo').animate({'opacity': '1'}, 500);
+
+            setTimeout(function(){
+                $('.lightweight_logo img').animate({'opacity': '1'}, 1500);
+            }, 400);
+
+        } else {
+            $('.logo').show();
+        }
+
+
         $('.login_to_account, .create_account').on('click touchstart', function(){
             $('.sign_in').toggle();
             $('.sign_up').toggle();
