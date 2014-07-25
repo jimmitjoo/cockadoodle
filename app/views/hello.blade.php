@@ -76,6 +76,20 @@
         }
     }
 
+
+    var setLoginFormHeight = function(){
+        var eb = $('.email_box');
+        var lib_h = eb.height();
+
+        if (lib_h < 260) {
+            eb.childrens('form').css({'margin-top': '0'});
+            eb.childrens('input').css({'margin-top': '5px'});
+        } else {
+            eb.childrens('form').css({'margin-top': ''});
+            eb.childrens('input').css({'margin-top': ''});
+        }
+    }
+
     $(window).on('resize', function(){
         setLoginHeight();
     });
@@ -86,7 +100,7 @@
 
         setLoginHeight();
 
-        $('.login_to_account, .create_account').on('click touchstart', function(){
+        $('.login_to_account, .create_account').on('touchstart', function(){
             $('.sign_in').toggle();
             $('.sign_up').toggle();
         });
