@@ -149,7 +149,7 @@ width: 100%;
         return vars;
     }
 
-    $("#range-slider").noUiSlider({
+    $("#reviewSlider").noUiSlider({
         start: 40,
         range: {
             'min': 0,
