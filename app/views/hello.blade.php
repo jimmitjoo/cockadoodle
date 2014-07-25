@@ -14,10 +14,16 @@
     width:100%;
     height: 100%;
     background: url('/img/Intro_BG_layer01.png') no-repeat center center;
+    background-size: contain;
     opacity: 0;
+    position: relative;
+    z-index: 1000;
 }
 .lightweight_logo img {
+    max-width: 100%;
     opacity: 0;
+    position: relative;
+    z-index: 1111;
 }
 @stop
 
@@ -78,7 +84,7 @@
 <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $('.logo').remove();
-        
+
         $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
         setTimeout(function(){
