@@ -81,10 +81,6 @@
 
             $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
-            setTimeout(function(){
-                $('.lightweight_logo img').animate({'opacity': '1'}, 1500);
-            }, 400);
-
         } else {
             $('.logo').show();
         }
