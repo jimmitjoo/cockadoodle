@@ -37,7 +37,7 @@ width: 100%;
 <div id="doodle"></div>
 
 
-<input id="reviewSlider" type="text">
+<div id="reviewSlider"></div>
 
 <ul class="menu">
     <li class="send">Send review</li>
@@ -150,10 +150,10 @@ width: 100%;
     }
 
     $("#reviewSlider").noUiSlider({
-        start: 40,
+        start: [ 0 ],
         range: {
-            'min': 0,
-            'max': 100
+            'min': [ 0 ],
+            'max': [ 100 ]
         }
     });
 
