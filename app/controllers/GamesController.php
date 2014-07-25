@@ -30,12 +30,25 @@ class GamesController extends \BaseController {
         $other_user = Input::get('user_id');
 
         if ($game = Game::where('first_player_id', '=', $other_user)->where('second_player_id', '=', $current_user)->first()) {
+
+            if ($game->status != 3) return false;
+
+            $game->first_player_id = $current_user;
+            $game->second_player_id = $other_user;
             $game->status = 1;
             $game->save();
+
             return $game;
+
         } elseif ($game = Game::where('first_player_id', '=', $current_user)->where('second_player_id', '=', $other_user)->first()) {
+
+            if ($game->status != 3) return false;
+
+            $game->first_player_id = $other_user;
+            $game->second_player_id = $current_user;
             $game->status = 1;
             $game->save();
+
             return $game;
         }
 

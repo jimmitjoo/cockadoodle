@@ -352,6 +352,30 @@ $(function(){
         alert('4 - Number picked by JAM, guaranteed to be random.');
     });
 
+    $('.back').on('touchstart', function(){
+        $('.doneDiv').animate({'top': '-100%'}, 300);
+        setTimeout(function(){
+            $('.doneDiv .text').html('');
+        },500);
+    });
+
+    $('.draw').on('touchstart', function(){
+        $.ajax({
+
+            type: 'GET',
+            url: 'http://cockadoodle.in/api/create_game',
+            data: { user_id: user_id, sess_id: sess_id },
+            cache: false,
+            dataType: 'json'
+
+        }).success(function(data){
+
+            game_id = data.id;
+            document.location.href = '/drawingboard?user_id=' + user_id + '&sess_id=' + sess_id + '&game_id=' + game_id;
+
+        });
+    })
+
     addSwipeToList();
 
 });
