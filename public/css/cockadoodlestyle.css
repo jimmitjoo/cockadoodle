@@ -614,8 +614,10 @@ body {
 }
 .doneDiv .text h2 {
     margin: 10px 0;
-    color: #ffffff;
     font-size: 40px;
+}
+.doneDiv .text * {
+    color: #ffffff;
 }
 .doneDiv .text img {
     max-width: 60% !important;

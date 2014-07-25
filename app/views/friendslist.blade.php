@@ -194,8 +194,8 @@ $(function(){
                     $('.doneDiv .text').html(
                         '<h2>Doodle Review!</h2>' +
                         '<img src="/img/review_icons/Cock_' + data.grade + '.png" /><br />' +
-                        data.grade + '/100<br />' +
-                        '<small>' + gradeName[data.grade] + '</small>'
+                        '<small>' + data.grade + '/100<br />' +
+                        gradeName[data.grade] + '</small>'
                     );
 
                 });
