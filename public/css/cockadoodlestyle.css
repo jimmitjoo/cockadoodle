@@ -604,8 +604,8 @@ body {
 }
 .doneDiv .text {
     width: 70%;
-    height: 60%;
-    margin: 20% 15%;
+    height: 80%;
+    margin: 10% 15%;
     color: #ffffff;
     font-size: 35px;
     text-transform: uppercase;
@@ -614,9 +614,13 @@ body {
 }
 .doneDiv .text h2 {
     margin: 10px 0;
+    color: #ffffff;
 }
 .doneDiv .text img {
-    max-width: 100% !important;
+    max-width: 60% !important;
+    margin-left: 20% !important;
+    display: block;
+    float: left;
 }
 
 
