@@ -187,6 +187,10 @@ $(function(){
                     gradeName[100] = 'Rager!!';
 
 
+                    $('.doneDiv').animate({
+                        'top': '0'
+                    }, 300);
+
                     $('.doneDiv .text').html(
                         '<h2>Doodle Review!</h2>' +
                         '<img src="/img/review_icons/Cock_' + data.grade + '.png" /><br />' +
