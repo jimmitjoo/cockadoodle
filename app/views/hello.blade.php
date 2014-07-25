@@ -92,6 +92,7 @@
 
     $(window).on('resize', function(){
         setLoginHeight();
+        setLoginFormHeight();
     });
 
     $(function() {
@@ -99,6 +100,7 @@
         $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
         setLoginHeight();
+        setLoginFormHeight();
 
         $('.login_to_account, .create_account').on('touchstart', function(){
             $('.sign_in').toggle();
