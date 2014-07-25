@@ -67,23 +67,7 @@
 
     $(function() {
 
-        var winwidth = $(document).width();
-        var winheight = $(document).width();
-
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-            $('.logo, video').remove();
-
-            $('.lightweight_logo').css({
-                'width': winwidth  + 'px',
-                'height': winheight + 'px'
-            });
-
-            $('.lightweight_logo').animate({'opacity': '1'}, 500);
-
-        } else {
-            $('.logo').show();
-        }
+        $('.lightweight_logo').animate({'opacity': '1'}, 500);
 
 
         $('.login_to_account, .create_account').on('click touchstart', function(){
