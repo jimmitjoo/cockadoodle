@@ -381,12 +381,14 @@ body {
 .friends_list li.cock_received:before,
 .friends_list li.cock_waiting_for_grade:before,
 .friends_list li.cock_hidden_now_needs_review:before,
+.friends_list li.cock_grade_sent_wait_for_new:before,
 .friends_list li.cock_graded:before,
 .friends_list li.cock_base:after,
 .friends_list li.cock_sent:after,
 .friends_list li.cock_received:after,
 .friends_list li.cock_waiting_for_grade:after,
 .friends_list li.cock_hidden_now_needs_review:after,
+.friends_list li.cock_grade_sent_wait_for_new:after,
 .friends_list li.cock_graded:after {
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -454,6 +456,9 @@ body {
     content: '';
     background: rgba(245, 0, 87, 0.90) url('/img/ReviewDoodle_icon_V1.png') no-repeat center center;
     background-size: contain;
+}
+.friends_list li.cock_grade_sent_wait_for_new:before {
+    content: 'Review sent';
 }
 /*.friends_list li.cock_sent:after,
 .friends_list li.cock_waiting_for_grade:after{
