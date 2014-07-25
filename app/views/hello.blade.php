@@ -5,6 +5,22 @@
 <!--<meta http-equiv="refresh" content="2;URL=/login">-->
 @stop
 
+@section('style')
+.logo {
+    display:none;
+}
+.lightweight_logo {
+    display:block;
+    width:100%;
+    height: 100%;
+    background: url('/img/Intro_BG_layer01.png') no-repeat center center;
+    opacity: 0;
+}
+.lightweight_logo img {
+    opacity: 0;
+}
+@stop
+
 @section('content')
 <div class="startscreen">
     <div class="logo">
@@ -14,6 +30,9 @@
             <source src="videos/Cad_Logo_anim_mk4.webmhd.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
+    </div>
+    <div class="lightweight_logo">
+        <img src="/img/Intro_BG_layer02.png" alt=""/>
     </div>
 </div>
 
@@ -57,6 +76,17 @@
 @section('scripts')
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $('.lightweight_logo').animate({'opacity': '1'}, 500);
+
+        setTimeout(function(){
+            $('.lightweight_logo img').animate({'opacity': '1'}, 1500);
+        }, 400);
+
+    } else {
+        $('.logo').show();
+    }
+
     $(function() {
         $('.login_to_account, .create_account').on('click touchstart', function(){
             $('.sign_in').toggle();
