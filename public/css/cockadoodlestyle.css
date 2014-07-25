@@ -587,5 +587,5 @@ body {
     background: #ffffff;
 }
 .noUi-handle {
-    background: #ff6f00;
+    background: #ff6f00 !important;
 }
