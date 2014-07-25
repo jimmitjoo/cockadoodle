@@ -9,29 +9,6 @@
 .logo {
     display:none;
 }
-.lightweight_logo {
-    display:block;
-    width:100%;
-    height: 100%;
-    background: url('/img/Intro_BG_layer01.png') no-repeat center center;
-    background-size: contain;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    float: left;
-}
-.lightweight_logo img {
-    max-width: 100%;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1111;
-    float:left;
-    display:block;
-}
 @stop
 
 @section('content')
