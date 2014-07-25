@@ -576,8 +576,8 @@ body {
     background: transparent;
 }
 .slider {
-    position: fixed;
+    position: fixed !important;
     bottom: 70px;
     left: 50%;
-    margin-left: -150px;
+    margin-left: -150px !important;
 }
