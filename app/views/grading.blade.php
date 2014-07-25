@@ -161,7 +161,7 @@ width: 100%;
         }
     });
 
-    $('#reviewSlider').on('change', function(){
+    $('#reviewSlider').on('slide', function(){
         var sVal = $(this).val();
         $('.redo').text(sVal);
     });
