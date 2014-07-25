@@ -21,9 +21,7 @@
             Your browser does not support the video tag.
         </video>
     </div>-->
-    <div class="lightweight_logo">
-        <img src="/img/Intro_BG_layer02.png" alt=""/>
-    </div>
+    <div class="lightweight_logo"></div>
 </div>
 
 
