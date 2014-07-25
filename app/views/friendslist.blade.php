@@ -169,7 +169,7 @@ $(function(){
                     url: 'http://cockadoodle.in/api/get_review',
                     data: {game_id: game_id},
                     cache: false,
-                    dataType: 'html'
+                    dataType: 'json'
 
                 }).success(function(data){
 
