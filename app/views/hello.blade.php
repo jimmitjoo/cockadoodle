@@ -68,6 +68,12 @@
     var setLoginHeight = function(){
         var lb_h = $('.login_box').height();
         $('.login_box').css({'line-height': lb_h + 'px'});
+
+        if (lb_h < 70) {
+            $('.login_box').css({'font-size': '35px'});
+        } else {
+            $('.login_box').css({'font-size': ''});
+        }
     }
 
     $(window).on('resize', function(){
