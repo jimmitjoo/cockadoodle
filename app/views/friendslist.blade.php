@@ -198,6 +198,11 @@ $(function(){
                         gradeName[data.grade] + '</small>'
                     );
 
+                    var mtop = $('.doneDiv .text').width() / 2;
+
+
+                    $('.doneDiv .text img').css({'margin-top': '-' + mtop + 'px'}, 1000);
+
                     setTimeout(function(){
                         $('.doneDiv .text img').animate({'opacity': '1'}, 1000);
                     }, 350);

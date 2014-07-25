@@ -630,7 +630,7 @@ body {
 }
 .doneDiv .text img {
     max-width: 100% !important;
-    margin-top: 40px;
+    top: 50%;
     display: block;
     float: left;
     position: absolute;
