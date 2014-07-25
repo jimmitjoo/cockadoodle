@@ -582,8 +582,11 @@ body {
     bottom: 70px;
     left: 5%;
 }
+.noUi-target {
+    border-color: #eeeeee !important;
+}
 .noUi-background {
-    background: #ffc107;
+    background: #ffc107 !important;
     box-shadow: none !important;
 }
 .noUi-origin {
@@ -592,4 +595,7 @@ body {
 .noUi-handle {
     background: #ff6f00 !important;
     box-shadow: none !important;
+}
+.noUi-handle:before, .noUi-handle:after {
+    display: none !important;
 }
