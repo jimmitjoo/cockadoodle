@@ -173,19 +173,19 @@ $(function(){
 
                 }).success(function(data){
 
-                    var gradeName = [
-                        0: 'Lifeless',
-                        10: 'Flaccid',
-                        20: 'Floppy',
-                        30: 'Limp',
-                        40: 'Embarrasing',
-                        50: 'Semi',
-                        60: 'Semi hard',
-                        70: 'Solid effort',
-                        80: 'Stiffy',
-                        90: 'Hard-on',
-                        100: 'Rager!!'
-                    ];
+                    var gradeName = {};
+                    gradeName[0] = 'Lifeless';
+                    gradeName[10] = 'Flaccid';
+                    gradeName[20] = 'Floppy';
+                    gradeName[30] = 'Limp';
+                    gradeName[40] = 'Embarrasing';
+                    gradeName[50] = 'Semi';
+                    gradeName[60] = 'Semi hard';
+                    gradeName[70] = 'Solid effort';
+                    gradeName[80] = 'Stiffy';
+                    gradeName[90] = 'Hard-on';
+                    gradeName[100] = 'Rager!!';
+
 
                     $('.doneDiv .text').html(
                         '<h2>Doodle Review!</h2>' +
