@@ -39,6 +39,10 @@
     @foreach ($mygames as $g)
 
         <?php
+        if ($g->status == 4) {
+            continue;
+        }
+
         if ($g->status == 1 && $g->first_player_id == Auth::id()) :
             $cock_class = 'cock_sent';
             $username = $g->second_player->username;
