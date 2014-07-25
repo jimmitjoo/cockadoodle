@@ -36,7 +36,8 @@ width: 100%;
 <div id="cock"></div>
 <div id="doodle"></div>
 
-<input type="text" data-slider="true" data-slider-values="0,1,2,3,4,5,6,7,8,9,10" value="0" data-slider-highlight="true">
+
+<input id="reviewSlider" type="text">
 
 <ul class="menu">
     <li class="send">Send review</li>
@@ -148,11 +149,12 @@ width: 100%;
         return vars;
     }
 
-    $("[data-slider]").each(function () {
-        var input = $(this);
-        $("<span>").addClass("output").insertAfter($(this));
-    }).bind("slider:ready slider:changed", function (event, data) {
-        $(this).nextAll(".output:first").html(data.value.toFixed(3));
+    $("#range-slider").noUiSlider({
+        start: 40,
+        range: {
+            'min': 0,
+            'max': 100
+        }
     });
 
 </script>
