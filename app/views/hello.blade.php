@@ -82,11 +82,11 @@
         var lib_h = eb.height();
 
         if (lib_h < 260) {
-            eb.childrens('form').css({'margin-top': '0'});
-            eb.childrens('input').css({'margin-top': '5px'});
+            eb.find('form').css({'margin-top': '0'});
+            eb.find('input').css({'margin-top': '5px'});
         } else {
-            eb.childrens('form').css({'margin-top': ''});
-            eb.childrens('input').css({'margin-top': ''});
+            eb.find('form').css({'margin-top': ''});
+            eb.find('input').css({'margin-top': ''});
         }
     }
 
