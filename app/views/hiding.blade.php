@@ -150,7 +150,7 @@ overflow: hidden !important;
         // send doodle, maybe that's done when sending to the game table?
 
         // display message that confirm it is sent
-        $('.doneDiv .text').text('Doodle sent back to your friend.');
+        $('.doneDiv .text').text('Doodle sent to friend');
 
         setTimeout(function(){
             document.location.href = '/friends';
