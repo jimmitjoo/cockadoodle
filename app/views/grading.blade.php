@@ -53,7 +53,7 @@ width: 100%;
 @section('scripts')
 
 <script src="/js/jquery.js"></script>
-<script src="/js/jquery.nouislider.js"></script>
+<script src="/js/jquery.nouislider.min.js"></script>
 
 <script>
 
