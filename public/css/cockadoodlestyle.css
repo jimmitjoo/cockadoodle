@@ -581,11 +581,15 @@ body {
     position: fixed !important;
     bottom: 70px;
     left: 5%;
+}
+.noUi-background {
     background: #ffc107;
+    box-shadow: none !important;
 }
 .noUi-origin {
     background: #ffffff;
 }
 .noUi-handle {
     background: #ff6f00 !important;
+    box-shadow: none !important;
 }
