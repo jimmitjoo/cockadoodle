@@ -64,15 +64,15 @@ var __slice = [].slice,
         marginTop: this.dragger.outerHeight() / -2,
         marginLeft: this.dragger.outerWidth() / -2
       });
-      this.track.touchstart(function(e) {
+      this.track.mousedown(function(e) {
         return _this.trackEvent(e);
       });
       if (this.settings.highlight) {
-        this.highlightTrack.touchstart(function(e) {
+        this.highlightTrack.mousedown(function(e) {
           return _this.trackEvent(e);
         });
       }
-      this.dragger.touchstart(function(e) {
+      this.dragger.mousedown(function(e) {
         if (e.which !== 1) {
           return;
         }
@@ -81,14 +81,14 @@ var __slice = [].slice,
         _this.domDrag(e.pageX, e.pageY);
         return false;
       });
-      $("body").touchmove(function(e) {
+      $("body").on('touchmove', function(e) {
         if (_this.dragging) {
           _this.domDrag(e.pageX, e.pageY);
           return $("body").css({
             cursor: "pointer"
           });
         }
-      }).touchend(function(e) {
+      }).on('touchend', function(e) {
         if (_this.dragging) {
           _this.dragging = false;
           _this.dragger.removeClass("dragging");
