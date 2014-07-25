@@ -40,7 +40,7 @@ width: 100%;
 <div id="reviewSlider"></div>
 
 <ul class="menu">
-    <li class="redo"></li>
+    <li class="redo">50</li>
     <li class="send">Send review</li>
 </ul>
 
@@ -142,7 +142,7 @@ width: 100%;
 
 
     $('.send').animate({'right':0}, 250);
-    //$('.redo').animate({'left':0}, 250);
+    $('.redo').animate({'left':0}, 250);
 
     function getUrlVars() {
         var vars = {};
