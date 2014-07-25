@@ -22,6 +22,10 @@ background-size: contain;
 background: url('/{{$doodle->doodle_uri}}') no-repeat center center;
 background-size: contain;
 }
+.send {
+width: 100%;
+}
+
 @stop
 
 @section('content')
@@ -32,8 +36,10 @@ background-size: contain;
 <div id="cock"></div>
 <div id="doodle"></div>
 
+<input type="text" data-slider="true" value="0.8" data-slider-highlight="true">
+
 <ul class="menu">
-    <li class="send">Grade</li>
+    <li class="send">Send review</li>
 </ul>
 
 <div class="doneDiv">
@@ -48,25 +54,6 @@ background-size: contain;
 <script src="/js/jquery.js"></script>
 
 <script>
-/*
-    var cock_height,
-        cock_width,
-        doodle_height,
-        doodle_width;
-
-    $("#the_cock").load(function() {
-        cock_height = $("#the_cock").height();
-        cock_width = $("#the_cock").width();
-
-        alert('cock_height: ' + cock_height + ' ::: cock_width: ' + cock_width);
-    });
-    $("#the_doodle").load(function() {
-        doodle_height = $("#the_doodle").height();
-        doodle_width = $("#the_doodle").width();
-
-        alert('doodle_height: ' + doodle_height + ' ::: doodle_width: ' + doodle_width);
-    });
-    */
 
     $(document).ready(function(){
 
@@ -160,6 +147,12 @@ background-size: contain;
         return vars;
     }
 
+    $("[data-slider]").each(function () {
+        var input = $(this);
+        $("<span>").addClass("output").insertAfter($(this));
+    }).bind("slider:ready slider:changed", function (event, data) {
+        $(this).nextAll(".output:first").html(data.value.toFixed(3));
+    });
 
 </script>
 
