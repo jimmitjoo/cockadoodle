@@ -21,8 +21,8 @@ class DrawingsController extends \BaseController {
     public function create_grade()
     {
 
-        $doodle = GameRound::where('doodle_id', '=', Input::get('doodle_id'))->get();
-        $game = Game::find($doodle->game_id);
+        $doodle = GameRound::where('doodle_id', '=', Input::get('doodle_id'))->first();
+        $game = Game::find($doodle['game_id']);
         $judge_id = Auth::id();
         $grade = Input::get('grade');
 
