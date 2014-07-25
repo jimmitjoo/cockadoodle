@@ -21,12 +21,19 @@ class DrawingsController extends \BaseController {
     public function create_grade()
     {
 
-        $doodle = Input::get('doodle_id');
+        $doodle = GameRound::where('doodle_id', '=', Input::get('doodle_id'))->get();
         $game = Game::find($doodle->game_id);
         $judge_id = Auth::id();
         $grade = Input::get('grade');
 
-        // Save grade as new post to the database
+        $game->status = 3;
+        $game->save();
+
+        $grading = new Grade();
+        $grading->judge_id = $judge_id;
+        $grading->doodle_id = Input::get('doodle_id');
+        $grading->grade = $grade;
+        $grading->save();
 
     }
 

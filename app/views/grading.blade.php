@@ -122,7 +122,7 @@ width: 100%;
             url: 'http://cockadoodle.in/api/grade_doodle',
             data: {
                 doodle_id: {{ $doodle->id }},
-                grade: getUrlVars()["user_id"]
+                grade: $('#reviewSlider').val()
             },
             cache: false
         });
