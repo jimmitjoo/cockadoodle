@@ -199,7 +199,7 @@ $(function(){
                     );
 
                     setTimeout(function(){
-                        $('.doneDiv .text img').animate({'zoom': '100%'});
+                        $('.doneDiv .text img').animate({'zoom': '100%','left': '0'}, 1000);
                     }, 350);
 
                 });

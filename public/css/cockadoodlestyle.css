@@ -611,6 +611,7 @@ body {
     text-transform: uppercase;
     float: left;
     display: block;
+    position: relative;
 }
 .doneDiv .text h2 {
     margin: 0;
@@ -625,6 +626,8 @@ body {
     display: block;
     float: left;
     zoom: 1%;
+    position: absolute;
+    left: 50%;
 }
 
 
