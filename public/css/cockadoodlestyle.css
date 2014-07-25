@@ -583,6 +583,7 @@ body {
     width: 100%;
     height: 100%;
     background: #03a9f4;
+    top: -100%;
 }
 .doneDiv .text {
     color: #ffffff;
