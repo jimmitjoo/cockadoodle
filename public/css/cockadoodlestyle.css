@@ -649,10 +649,10 @@ body {
     float: left;
 }
 .doneDiv .menu li.back {
-    background: #ffc107;
+    background: #42bd41;
 }
 .doneDiv .menu li.draw {
-    background: #42bd41;
+    background: #ffc107;
 }
 
 
