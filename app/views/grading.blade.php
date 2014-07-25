@@ -141,10 +141,10 @@ width: 100%;
 
     $('#doodle').on('click', function(){
         var doodle = $(this);
-        if (doodle.css('opacity') > '.3' || !doodle.css('opacity')) {
-            doodle.css({'opacity': '.3'});
-        } else {
+        if (doodle.css('opacity') < '1') {
             doodle.css({'opacity': '1'});
+        } else {
+            doodle.css({'opacity': '.1'});
         }
     });
 
