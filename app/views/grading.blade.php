@@ -36,7 +36,7 @@ width: 100%;
 <div id="cock"></div>
 <div id="doodle"></div>
 
-<input type="text" data-slider="true" value="0.8" data-slider-highlight="true">
+<input type="text" data-slider="true" data-slider-values="0,1,2,3,4,5,6,7,8,9,10" value="0" data-slider-highlight="true">
 
 <ul class="menu">
     <li class="send">Send review</li>
