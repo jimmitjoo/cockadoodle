@@ -65,11 +65,6 @@ width: 100%;
             doodle_height,
             doodle_width;
 
-        cock_height = $("#the_cock").height();
-        cock_width = $("#the_cock").width();
-        doodle_height = $("#the_doodle").height();
-        doodle_width = $("#the_doodle").width();
-
         /*alert(
             'cock height:' + cock_height + ' :::' +
             'cock width:' + cock_width + ' :::' +
@@ -78,6 +73,11 @@ width: 100%;
         );*/
 
         setTimeout(function(){
+
+            cock_height = $("#the_cock").height();
+            cock_width = $("#the_cock").width();
+            doodle_height = $("#the_doodle").height();
+            doodle_width = $("#the_doodle").width();
 
             var win_width = $(window).width();
             var win_height = $(window).height();
