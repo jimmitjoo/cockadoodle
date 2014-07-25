@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/montserrat.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/cockadoodlestyle.css">
-    <link rel="stylesheet" href="css/simple-slider.css">
+    <link rel="stylesheet" href="css/jquery.nouislider.css">
 
     <style>
         @yield('styles')
