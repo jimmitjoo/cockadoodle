@@ -52,7 +52,7 @@ width: 100%;
 @section('scripts')
 
 <script src="/js/jquery.js"></script>
-<script src="/js/simple-slider.min.js"></script>
+<script src="/js/simple-slider.js"></script>
 
 <script>
 

@@ -575,3 +575,9 @@ body {
     z-index: 0;
     background: transparent;
 }
+.slider {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    margin-left: -150px;
+}
