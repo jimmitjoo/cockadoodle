@@ -134,13 +134,13 @@ class UsersController extends \BaseController {
                 $fbemailcount == 0
             ) {
                 $user = new User();
-                if ($fbemail) $user->email = $result['email'];
+                if ($fbemail) $user->email = $fbemail;
                 $user->facebook_identification = $result['id'];
                 $user->username = $result['first_name']. ' ' . $result['last_name'];
                 $user->save();
             }
 
-            if ($fbemail) $u = User::where('email', '=', $result['email'])->first();
+            if ($fbemail) $u = User::where('email', '=', $fbemail)->first();
             if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
 
             if (!$u->username || empty($u->username)) {
