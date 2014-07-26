@@ -120,18 +120,27 @@ class UsersController extends \BaseController {
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
 
+            if (!$result['email'] || empty($result['email'])) {
+                $fbemail = false;
+                $fbemailcount = 0;
+            } else {
+                $fbemailcount = User::where('email', '=', $result['email'])->count();
+                $fbemail = $result['email'];
+            }
+
+
             if (
                 User::where('facebook_identification', '=', $result['id'])->count() == 0 &&
-                User::where('email', '=', $result['email'])->count() == 0
+                $fbemailcount == 0
             ) {
                 $user = new User();
-                $user->email = $result['email'];
+                if ($fbemail) $user->email = $result['email'];
                 $user->facebook_identification = $result['id'];
                 $user->username = $result['first_name']. ' ' . $result['last_name'];
                 $user->save();
             }
 
-            $u = User::where('email', '=', $result['email'])->first();
+            if ($fbemail) $u = User::where('email', '=', $result['email'])->first();
             if (!$u) $u = User::where('facebook_identification', '=', $result['id'])->first();
 
             if (!$u->username || empty($u->username)) {
