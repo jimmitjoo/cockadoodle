@@ -120,7 +120,7 @@ class UsersController extends \BaseController {
             // Send a request with it
             $result = json_decode( $fb->request( '/me' ), true );
 
-            if (!$result['email'] || empty($result['email'])) {
+            if (!array_key_exists('email', $result)) {
                 $fbemail = false;
                 $fbemailcount = 0;
             } else {
